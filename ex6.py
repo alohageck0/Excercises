@@ -1,18 +1,8 @@
 import math
 
 __author__ = 'royalfiish'
-
-x = raw_input('Enter sequence of numbers: ')
-list_D = x.split(",")
-# print list_D
 result = []
-
-def sqrt (D):
-    d = int(D)
-    q = math.sqrt((2 * 50 * d )/ 30)
-    return q.__trunc__()
-
-for D in list_D:
-    result.append(str(sqrt(D)))
+items = [x for x in (raw_input('Enter sequence of numbers: ').split(','))]
+for d in items:
+    result.append(str(int(math.sqrt((2 * 50 * float(d) )/ 30))))
 print (",").join(result)
-
