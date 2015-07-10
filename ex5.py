@@ -1,18 +1,14 @@
-__author__ = 'royalfiish'
-
-
-class Func():
-
+class InputOutString(object):
     def __init__(self):
-        self.x = ""
+        self.s = ""
 
-    def getstring(self):
-        self.x = raw_input('Enter string: ')
+    def getString(self):
+        self.s = raw_input()
 
-    def toupper(self):
-        print self.x.upper()
+    def printString(self):
+        print self.s.upper()
 
-y = Func()
-y.getstring()
-y.toupper()
 
+strObj = InputOutString()
+strObj.getString()
+strObj.printString()
