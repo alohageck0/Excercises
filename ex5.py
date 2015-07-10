@@ -2,7 +2,6 @@ __author__ = 'royalfiish'
 
 
 class Func():
-
     def __init__(self):
         self.x = ""
 
@@ -12,7 +11,7 @@ class Func():
     def toupper(self):
         print self.x.upper()
 
+
 y = Func()
 y.getstring()
 y.toupper()
-
