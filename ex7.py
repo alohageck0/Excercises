@@ -1,7 +1,9 @@
 # coding=utf-8
 __author__ = 'royalfiish'
-test = "Github1"
-test1 = "Github2"
+
+
+def two_dim_list(x, y):
+    arr2 = []
 
 '''
 Question:
@@ -12,5 +14,7 @@ Example
 Suppose the following inputs are given to the program:
 3,5
 Then, the output of the program should be:
-[[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
+[[0, 0, 0, 0, 0],
+ [0, 1, 2, 3, 4],
+ [0, 2, 4, 6, 8]]
 '''
