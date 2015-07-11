@@ -1,7 +1,9 @@
 # coding=utf-8
 __author__ = 'royalfiish'
-test = "Github1"
-test1 = "Github2"
+
+
+def two_dim_list(x, y):
+    arr2 = []
 
 '''
 Question:
