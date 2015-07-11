@@ -6,10 +6,10 @@ class Func():
         self.x = ""
 
     def getstring(self):
-        self.x = raw_input('Enter string: ')
+        self.x = input('Enter string: ')
 
     def toupper(self):
-        print self.x.upper()
+        print(self.x.upper())
 
 
 y = Func()
