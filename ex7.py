@@ -1,9 +1,15 @@
 # coding=utf-8
 __author__ = 'royalfiish'
+import numpy
 
 
 def two_dim_list(x, y):
-    arr2 = []
+    arr2 = numpy.empty((x, y))
+    for x in numpy.nditer(arr2, op_flags=['readwrite']):
+        print(x)
+
+
+two_dim_list(2, 3)
 
 '''
 Question:
