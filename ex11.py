@@ -8,7 +8,7 @@ def to_decimal(binary):
 words = input('Enter words separated by space: ').split(',')
 divisible = []
 for num in words:
-    if to_decimal(num) % 5 is 0:
+    if not to_decimal(num) % 5:
         divisible.append(num)
 print(','.join(divisible))
 
