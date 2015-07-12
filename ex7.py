@@ -4,7 +4,7 @@ import numpy
 
 
 def two_dim_list():
-    col_row = input('Enter two digits: ')
+    col_row = input('Enter two digits separated by comma: ')
     dims = col_row.split(',')
     x, y = dims
     arr2 = numpy.empty((int(x), int(y)))
