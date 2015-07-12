@@ -5,11 +5,15 @@ import numpy
 
 def two_dim_list(x, y):
     arr2 = numpy.empty((x, y))
-    for x in numpy.nditer(arr2, op_flags=['readwrite']):
-        print(x)
+    iter1 = numpy.nditer(arr2, op_flags=['readwrite'], flags=['multi_index'])
+    while not iter1.finished:
+        iter1[0] = iter1.multi_index[0] * iter1.multi_index[1]
+        # print(iter1[0])
+        iter1.iternext()
+    print(arr2)
 
 
-two_dim_list(2, 3)
+two_dim_list(3, 5)
 
 '''
 Question:
