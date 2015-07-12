@@ -1,8 +1,7 @@
 __author__ = 'royalfiish'
 
-words = input('Enter words separated by comma: ')
-words_list = words.split(',')
-print(', '.join(sorted(words_list)))
+words = input('Enter words separated by comma: ').split(',')
+print(', '.join(sorted(words)))
 
 '''
 Question:
