@@ -3,8 +3,11 @@ __author__ = 'royalfiish'
 import numpy
 
 
-def two_dim_list(x, y):
-    arr2 = numpy.empty((x, y))
+def two_dim_list():
+    col_row = input('Enter two digits: ')
+    dims = col_row.split(',')
+    x, y = dims
+    arr2 = numpy.empty((int(x), int(y)))
     iter1 = numpy.nditer(arr2, op_flags=['readwrite'], flags=['multi_index'])
     while not iter1.finished:
         iter1[0] = iter1.multi_index[0] * iter1.multi_index[1]
@@ -13,7 +16,7 @@ def two_dim_list(x, y):
     print(arr2)
 
 
-two_dim_list(3, 5)
+two_dim_list()
 
 '''
 Question:
