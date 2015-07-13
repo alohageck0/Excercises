@@ -1,6 +1,25 @@
 __author__ = 'royalfiish'
 
-num = input('Enter sentence: ')
+# num = input('Enter sentence: ')
+'''
+let = '3'
+summ = 0
+for i in range(0, int(let)):
+    summ += int(let*3)
+    print(summ)
+
+'''
+
+
+def foo(digit):
+    summ = 0
+    for i in range(1, 5):
+        str(digit)
+        summ += int(digit * i)
+        print(summ)
+
+
+foo(9)
 
 '''
 Question:
