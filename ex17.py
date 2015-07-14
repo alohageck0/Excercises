@@ -1,5 +1,7 @@
 __author__ = 'royalfiish'
 
+acc = input('Enter numbers: ').split(' ')
+
 '''
 Question:
 Write a program that computes the net amount of a bank account based a transaction log from console input.
