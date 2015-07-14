@@ -1,5 +1,9 @@
 __author__ = 'royalfiish'
 
+num = input('Enter numbers: ').split(',')
+odds = list(x for x in num if int(x) % 2 != 0)
+print((', ').join(odds))
+
 '''
 Question:
 Use a list comprehension to square each odd number in a list.
