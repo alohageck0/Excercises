@@ -1,9 +1,8 @@
 __author__ = 'royalfiish'
 
 total = 0
-acc = input('Enter: ').split('\n')
-print(acc)
-'''
+while True:
+    acc = input('Enter: ').split(' ')
     if acc[0] is 'D':
         total += int(acc[1])
     elif acc[0] is 'W':
@@ -11,8 +10,6 @@ print(acc)
     else:
         print(total)
         break
-
-'''
 
 '''
 Question:
