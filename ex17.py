@@ -1,6 +1,15 @@
 __author__ = 'royalfiish'
 
-acc = input('Enter numbers: ').split(' ')
+total = 0
+while True:
+    acc = input('Enter: ').split(' ')
+    if acc[0] is 'D':
+        total += int(acc[1])
+    elif acc[0] is 'W':
+        total -= int(acc[1])
+    else:
+        print(total)
+        break
 
 '''
 Question:
