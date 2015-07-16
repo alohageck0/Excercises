@@ -27,16 +27,23 @@ special = ['$', '#', '@']
 valid = []
 
 for password in passwords:
-    if check_symbol(password, lower) and check_symbol(password, upper) and check_symbol(password,
-                                                                                        number) and check_symbol(
-        password, special) and check_len(password):
-        valid.append(password)
-        # print('YES')
+    if not check_len(password):
+        continue
+    else:
+        pass
+    if not check_symbol(password, lower):
+        continue
+    elif not check_symbol(password, upper):
+        continue
+    elif not check_symbol(password, number):
+        continue
+    elif not check_symbol(password, special):
+        continue
+    else:
+        pass
+    valid.append(password)
 
-if len(valid) < 2:
-    print(valid[0])
-else:
-    print(','.join(valid))
+print(','.join(valid))
 
 '''
 Question:
