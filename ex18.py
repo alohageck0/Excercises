@@ -1,5 +1,7 @@
 __author__ = 'royalfiish'
 
+passwords = input('Enter numbers: ').split(',')
+
 '''
 Question:
 A website requires the users to input username and password to register.
