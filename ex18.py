@@ -2,27 +2,48 @@ import string
 
 __author__ = 'royalfiish'
 
-
-def check_len():
-    passwords = input('Enter numbers: ').split(',')
-    for password in passwords:
-        if 6 <= len(password) <= 12:
-            pass
-        else:
-            print("password length must be 6-12 characters")
-            check_len()
+passwords = input("Enter passwords: ").split(',')
 
 
-check_len()
-passwords = ['ABd1234@1', 'a F1#,2w3E*', '2We3345']
+def check_len(password):
+    if 6 <= len(password) <= 12:
+        return True
+    else:
+        return False
+
+
+def check_symbol(list1, list2):
+    _ = False
+    for letter in list1:
+        if letter in list2:
+            _ = True
+    return _
+
+
+# passwords = ['ABd1234@1', 'a F1#', '2w3E*', '2We3345']
 lower = list(string.ascii_lowercase)
 upper = list(string.ascii_uppercase)
 number = list(string.digits)
+special = ['$', '#', '@']
 valid = []
-for password in passwords:
-    if not len(password) >= 6 and len(password) <= 12:
 
-    for letter in lower
+# print(check_symbol(passwords[1], lower))
+# print(check_symbol(passwords[1], upper))
+# print(check_symbol(passwords[1], number))
+# print(check_symbol(passwords[1], special))
+# print(check_len(passwords[1]))
+
+for password in passwords:
+    if check_symbol(password, lower) and check_symbol(password, upper) and check_symbol(password,
+                                                                                        number) and check_symbol(
+        password, special) and check_len(password):
+        valid.append(password)
+        # print('YES')
+
+if len(valid) < 2:
+    print(valid[0])
+else:
+    print(','.join(valid))
 
 '''
 Question:
