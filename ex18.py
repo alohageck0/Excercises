@@ -13,11 +13,11 @@ def check_len(password):
 
 
 def check_symbol(list1, list2):
-    _ = False
+    Check_sym = False
     for letter in list1:
         if letter in list2:
-            _ = True
-    return _
+            Check_sym = True
+    return Check_sym
 
 
 lower = list(string.ascii_lowercase)

@@ -1,4 +1,15 @@
 __author__ = 'royalfiish'
+from operator import itemgetter
+
+datas = []
+while True:
+    inp = input("Enter 'name, age, score': ")
+    if not inp:
+        break
+    else:
+        data = tuple(inp.split(','))
+        datas.append(data)
+print(sorted(datas, key=itemgetter(0, 1, 2)))
 
 '''
 Question:
