@@ -1,6 +1,28 @@
+import string
+
 __author__ = 'royalfiish'
 
-passwords = input('Enter numbers: ').split(',')
+
+def check_len():
+    passwords = input('Enter numbers: ').split(',')
+    for password in passwords:
+        if 6 <= len(password) <= 12:
+            pass
+        else:
+            print("password length must be 6-12 characters")
+            check_len()
+
+
+check_len()
+passwords = ['ABd1234@1', 'a F1#,2w3E*', '2We3345']
+lower = list(string.ascii_lowercase)
+upper = list(string.ascii_uppercase)
+number = list(string.digits)
+valid = []
+for password in passwords:
+    if not len(password) >= 6 and len(password) <= 12:
+
+    for letter in lower
 
 '''
 Question:
