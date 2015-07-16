@@ -20,18 +20,11 @@ def check_symbol(list1, list2):
     return _
 
 
-# passwords = ['ABd1234@1', 'a F1#', '2w3E*', '2We3345']
 lower = list(string.ascii_lowercase)
 upper = list(string.ascii_uppercase)
 number = list(string.digits)
 special = ['$', '#', '@']
 valid = []
-
-# print(check_symbol(passwords[1], lower))
-# print(check_symbol(passwords[1], upper))
-# print(check_symbol(passwords[1], number))
-# print(check_symbol(passwords[1], special))
-# print(check_len(passwords[1]))
 
 for password in passwords:
     if check_symbol(password, lower) and check_symbol(password, upper) and check_symbol(password,
