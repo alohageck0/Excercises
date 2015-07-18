@@ -1,5 +1,7 @@
 __author__ = 'royalfiish'
 
+import math
+
 coords = [0, 0]
 
 
@@ -33,6 +35,9 @@ while True:
         pass
     else:
         continue
+
+distance = math.sqrt(coords[0] ** 2 + coords[1] ** 2)
+print("Rounded distance is", int(round(distance)))
 
 '''
 A robot moves in a plane starting from the original point (0,0).
