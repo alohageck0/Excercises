@@ -1,5 +1,27 @@
 __author__ = 'royalfiish'
 
+coords = [0, 0]
+
+
+def change_coords(tup):
+    global coords
+
+    if tup[0] is 'up':
+        coords[1] += int(tup[1])
+    elif tup[0] is 'down':
+        coords[1] -= int(tup[1])
+    elif tup[0] is 'right':
+        coords[0] += int(tup[1])
+    elif tup[0] is 'left':
+        coords[0] -= int(tup[1])
+
+
+test = ['down', 4]
+test1 = ['left', 4]
+tes = change_coords(test)
+tes = change_coords(test1)
+print(coords)
+'''
 while True:
     put = input("Enter 'direction, steps': ")
     if not put:
@@ -7,7 +29,7 @@ while True:
     acc = tuple(put.split(' '))
 
 print(acc)
-
+'''
 '''
 A robot moves in a plane starting from the original point (0,0).
 The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps.
