@@ -9,31 +9,31 @@ def change_coords(tup):
     tup1 = int(tup[1])
     if tup0 == 'up':
         coords[1] += tup1
+        return True
     elif tup0 == 'down':
         coords[1] -= tup1
+        return True
     elif tup0 == 'right':
         coords[0] += tup1
+        return True
     elif tup0 == 'left':
         coords[0] -= tup1
+        return True
     else:
-        print("Enter 'UP, DOWN, RIGHT or LEFT': ")
+        print("Enter UP, DOWN, RIGHT or LEFT")
         return False
 
 
-test = ['DOWN', 4]
-test1 = ['UP', 5]
-tes = change_coords(test)
-tes = change_coords(test1)
-print(coords)
-'''
 while True:
     put = input("Enter 'direction, steps': ")
     if not put:
         break
-    acc = tuple(put.split(' '))
+    acc = put.split(' ')
+    if change_coords(acc):
+        pass
+    else:
+        continue
 
-print(acc)
-'''
 '''
 A robot moves in a plane starting from the original point (0,0).
 The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps.
