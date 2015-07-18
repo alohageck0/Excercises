@@ -1,6 +1,7 @@
 __author__ = 'royalfiish'
 
 tup = ('DOWN', 3)
+tup = tuple(tup)
 ss = tup[0].lower()
 print(ss)
 
