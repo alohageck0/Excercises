@@ -5,19 +5,23 @@ coords = [0, 0]
 
 def change_coords(tup):
     global coords
-    low_elem = tup[0].lower()
-    if low_elem is 'up':
-        coords[1] += int(tup[1])
-    elif low_elem is 'down':
-        coords[1] -= int(tup[1])
-    elif low_elem is 'right':
-        coords[0] += int(tup[1])
-    elif low_elem is 'left':
-        coords[0] -= int(tup[1])
+    tup0 = tup[0].lower()
+    tup1 = int(tup[1])
+    if tup0 == 'up':
+        coords[1] += tup1
+    elif tup0 == 'down':
+        coords[1] -= tup1
+    elif tup0 == 'right':
+        coords[0] += tup1
+    elif tup0 == 'left':
+        coords[0] -= tup1
+    else:
+        print("Enter 'UP, DOWN, RIGHT or LEFT': ")
+        return False
 
 
-test = ['down', 4]
-test1 = ['left', 4]
+test = ['DOWN', 4]
+test1 = ['UP', 5]
 tes = change_coords(test)
 tes = change_coords(test1)
 print(coords)
