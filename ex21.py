@@ -1,5 +1,13 @@
 __author__ = 'royalfiish'
 
+while True:
+    put = input("Enter 'direction, steps': ")
+    if not put:
+        break
+    acc = tuple(put.split(' '))
+
+print(acc)
+
 '''
 A robot moves in a plane starting from the original point (0,0).
 The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps.
