@@ -5,14 +5,14 @@ coords = [0, 0]
 
 def change_coords(tup):
     global coords
-
-    if tup[0] is 'up':
+    low_elem = tup[0].lower()
+    if low_elem is 'up':
         coords[1] += int(tup[1])
-    elif tup[0] is 'down':
+    elif low_elem is 'down':
         coords[1] -= int(tup[1])
-    elif tup[0] is 'right':
+    elif low_elem is 'right':
         coords[0] += int(tup[1])
-    elif tup[0] is 'left':
+    elif low_elem is 'left':
         coords[0] -= int(tup[1])
 
 
