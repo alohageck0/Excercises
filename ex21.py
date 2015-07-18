@@ -1,12 +1,8 @@
 __author__ = 'royalfiish'
 
-while True:
-    put = input("Enter 'direction, steps': ")
-    if not put:
-        break
-    acc = tuple(put.split(' '))
-
-print(acc)
+tup = ('DOWN', 3)
+ss = tup[0].lower()
+print(ss)
 
 '''
 A robot moves in a plane starting from the original point (0,0).
