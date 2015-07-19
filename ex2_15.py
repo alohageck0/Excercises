@@ -1,5 +1,10 @@
 __author__ = 'royalfiish'
 
+tup = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+ind = len(tup) // 2
+print(tup[:ind])
+print(tup[ind:])
+
 '''
 Question:
     With a given tuple (1,2,3,4,5,6,7,8,9,10), write a program to print the first
