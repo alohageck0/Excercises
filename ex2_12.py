@@ -1,6 +1,6 @@
 __author__ = 'royalfiish'
 
-num = int(input("Enter number: "))
+num = int(input("Enter number to check: "))
 
 
 def check_even(number):
