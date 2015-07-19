@@ -1,5 +1,14 @@
 __author__ = 'royalfiish'
 
+
+def print_doc(func):
+    print(func.__doc__)
+
+
+print_doc(abs)
+print_doc(int)
+print_doc(input)
+
 '''
 Question:
     Python has many built-in functions, and if you do not know how to use it,
