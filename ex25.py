@@ -4,12 +4,18 @@ __author__ = 'royalfiish'
 class Testclass:
     classparam = 'CLASS'
 
-    def __init__(self, instparam):
+    def __init__(self, instparam=None):
         self.inst = instparam
 
 
 test = Testclass('INSTANCE')
 print('%s is class parameter and %s is instance parameter' % (test.classparam, test.inst))
+
+test = Testclass()
+test.inst = 'INSTANCE'
+print('%s is class parameter and %s is instance parameter' % (test.classparam, test.inst))
+
+
 
 '''
 Question:
