@@ -1,5 +1,8 @@
 __author__ = 'royalfiish'
 
+words = input('Enter sentence: ').split(' ')
+print(words)
+
 '''
 Write a program to compute the frequency of the words from the input.
 The output should output after sorting the key alphanumerically.
