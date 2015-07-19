@@ -1,5 +1,13 @@
 __author__ = 'royalfiish'
 
+
+def summ(a, b):
+    return a + b
+
+
+print(summ(5, 6))
+print(summ(5, 10))
+
 '''
 Question:
     Define a function which can compute the sum of two numbers.
