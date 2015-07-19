@@ -3,9 +3,11 @@ __author__ = 'royalfiish'
 arr = []
 for strin in range(2):
     arr.append(input("Enter string: "))
-if len(arr[0]) > len(arr[1]):
+len1 = len(arr[0])
+len2 = len(arr[1])
+if len1 > len2:
     print(arr[0])
-elif len(arr[0]) == len(arr[1]):
+elif len1 == len2:
     for strin in arr:
         print(strin)
 else:
