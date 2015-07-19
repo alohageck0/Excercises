@@ -1,11 +1,11 @@
-
 __author__ = 'royalfiish'
 
 tup = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-tup_even = tuple
+list_even = []
 for num in tup:
-    if not num
-    
+    if not num % 2:
+        list_even.append(num)
+print(tuple(list_even))
 
 # Question:
 #     Write a program to generate and print another tuple whose values
