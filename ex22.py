@@ -1,7 +1,14 @@
 __author__ = 'royalfiish'
 
 words = input('Enter sentence: ').split(' ')
-print(words)
+count = dict()
+for word in words:
+    if word not in count:
+        count[word] = 1
+    else:
+        count[word] += 1
+for k, v in sorted(count.items()):
+    print(k + ':', v)
 
 '''
 Write a program to compute the frequency of the words from the input.
