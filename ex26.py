@@ -2,11 +2,11 @@ __author__ = 'royalfiish'
 
 
 def summ(a, b):
-    return a + b
+    print(a + b)
 
 
-print(summ(5, 6))
-print(summ(5, 10))
+# summ(5, 6)
+# summ(5, 10)
 
 '''
 Question:
