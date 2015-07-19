@@ -6,6 +6,7 @@ coords = [0, 0]
 
 
 def change_coords(tup):
+    """Changes coordinates of robot"""
     global coords
     tup0 = tup[0].lower()
     tup1 = int(tup[1])

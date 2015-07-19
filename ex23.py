@@ -6,6 +6,7 @@ class Calc:
         self.val = int
 
     def square(self, value):
+        """Calculate square value of number"""
         self.val = value ** 2
         return self.val
 

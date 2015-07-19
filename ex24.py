@@ -1,4 +1,5 @@
 __author__ = 'royalfiish'
+import ex21
 
 
 def print_doc(func):
@@ -8,6 +9,7 @@ def print_doc(func):
 print_doc(abs)
 print_doc(int)
 print_doc(input)
+print_doc(ex21.change_coords)
 
 '''
 Question:
