@@ -1,5 +1,9 @@
 __author__ = 'royalfiish'
 
+foo = filter(lambda x: x % 2 == 0, range(1, 21))
+for num in foo:
+    print(num)
+
 '''
 Question:
     Write a program which can filter() to make a list whose
