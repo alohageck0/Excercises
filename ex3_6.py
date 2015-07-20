@@ -1,5 +1,11 @@
 __author__ = 'royalfiish'
 
+lis = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+foo_square = map(lambda x: x ** 2, filter(lambda x: x % 2 == 0, lis))
+for num in foo_square:
+    print(num)
+
 '''
 Question:
     Write a program which can map() and filter() to make a list whose
