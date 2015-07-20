@@ -1,4 +1,18 @@
+import math
+
 __author__ = 'royalfiish'
+
+
+class Circle:
+    def __init__(self, radius):
+        self.rad = radius
+
+    def area(self):
+        return round(math.pi * self.rad ** 2)
+
+
+test = Circle(50)
+print(test.area())
 
 '''
 Question:
