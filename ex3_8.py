@@ -1,5 +1,9 @@
 __author__ = 'royalfiish'
 
+foo = map(lambda x: x ** 2, range(1, 21))
+for num in foo:
+    print(num)
+
 '''
 Question:
 Write a program which can map() to make a list whose elements
