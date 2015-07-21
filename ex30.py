@@ -1,16 +1,13 @@
 __author__ = 'royalfiish'
+import re
 
 while True:
     inp = input("Enter e-mail: ")
-    index = 0
     if not inp:
         break
-    for letter in inp:
-        if not letter == '@':
-            index += 1
-        else:
-            break
-    print(inp[:index])
+    pattern = re.compile("(\w+)@(\w+\.\w)")
+    print(pattern.match(inp).group(1))
+
 '''
 Question:
 
