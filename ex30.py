@@ -3,10 +3,12 @@ __author__ = 'royalfiish'
 import re
 
 emailAddress = input()
-pat2 = "(\w+)@((\w+\.)+(com))"
-r2 = re.match(pat2, emailAddress)
+pat2 = re.compile("(\w+)@((\w+\.)+(\w))")
+r2 = pat2.match(emailAddress)
 print(r2.group(1))
-
+# p = re.compile('(a(b)c)d')
+# m = p.match('abcd')
+# print(m.group(0))
 '''
 Question:
 
