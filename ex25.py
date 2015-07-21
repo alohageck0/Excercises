@@ -15,8 +15,6 @@ test = Testclass()
 test.inst = 'INSTANCE'
 print('%s is class parameter and %s is instance parameter' % (test.classparam, test.inst))
 
-
-
 '''
 Question:
     Define a class, which have a class parameter and have a same instance parameter.
