@@ -1,9 +1,44 @@
 __author__ = 'royalfiish'
 
-tup = ('DOWN', 3)
-tup = tuple(tup)
-ss = tup[0].lower()
-print(ss)
+import math
+
+coords = [0, 0]
+
+
+def change_coords(tup):
+    """Changes coordinates of robot"""
+    global coords
+    tup0 = tup[0].lower()
+    tup1 = int(tup[1])
+    if tup0 == 'up':
+        coords[1] += tup1
+        return True
+    elif tup0 == 'down':
+        coords[1] -= tup1
+        return True
+    elif tup0 == 'right':
+        coords[0] += tup1
+        return True
+    elif tup0 == 'left':
+        coords[0] -= tup1
+        return True
+    else:
+        print("Enter UP, DOWN, RIGHT or LEFT")
+        return False
+
+
+while True:
+    put = input("Enter 'direction, steps': ")
+    if not put:
+        break
+    acc = put.split(' ')
+    if change_coords(acc):
+        pass
+    else:
+        continue
+
+distance = math.sqrt(coords[0] ** 2 + coords[1] ** 2)
+print("Rounded distance is", int(round(distance)))
 
 '''
 A robot moves in a plane starting from the original point (0,0).
