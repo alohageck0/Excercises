@@ -1,4 +1,13 @@
+import re
+
 __author__ = 'royalfiish'
+
+while True:
+    inp = input("Enter sequence of words separated by whitespace: ")
+    if not inp:
+        break
+    pattern = re.compile("(\d)\s")
+    print(pattern.findall(inp))
 
 '''
 Question:
