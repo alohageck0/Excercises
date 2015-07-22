@@ -1,5 +1,19 @@
 __author__ = 'royalfiish'
 
+inp = int(input("Enter n: "))
+
+
+def comp(n):
+    if n > 1:
+        return comp(n - 1) + comp(n - 2)
+    elif n == 1:
+        return 1
+    elif n == 0:
+        return 0
+
+
+print(comp(inp))
+
 '''
 Question:
 
