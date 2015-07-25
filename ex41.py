@@ -1,5 +1,8 @@
 __author__ = 'royalfiish'
 
+inp = input("Enter expression: ")
+print(eval(inp))
+
 '''
 Question:
 
