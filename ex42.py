@@ -1,10 +1,32 @@
 __author__ = 'royalfiish'
 
-lis = [1, 4, 6, 3, 5, 7, 8, 9, 4, 3, 4, 5, 2]
-lis1 = set(lis)
-# print(lis1)
+lis = range(1, 4000, 1)
+index = 0
+step = 0
 
 
+def find(elem, arr):
+    global index
+    global step
+    step += 1
+    denom = len(arr) // 2
+    arr_elem = arr[denom]
+    if denom == 1:
+        return index
+    if elem == arr_elem:
+        index += denom
+        return index
+    elif elem < arr_elem:
+        arr = arr[:denom + 1]
+        return find(elem, arr)
+    elif elem > arr_elem:
+        arr = arr[denom:]
+        index += denom
+        return find(elem, arr)
+
+
+print("Index is", find(1453, lis))
+print("Steps", step)
 '''
 Question:
 
