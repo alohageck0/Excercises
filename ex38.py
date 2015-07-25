@@ -1,10 +1,15 @@
 __author__ = 'royalfiish'
 
-inp = input("Enter n: ")
+inp = int(input("Enter n: "))
 
 
-def foo():
+def foo(n):
+    for i in range(0, n + 1):
+        if not i % 2:
+            yield str(i)
 
+
+print(",".join(foo(inp)))
 
 '''
 Question:
