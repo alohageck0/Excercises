@@ -1,9 +1,16 @@
 __author__ = 'royalfiish'
 
+inp = input("Enter n: ")
+
+
+def foo():
+
+
 '''
 Question:
 
-Please write a program using generator to print the even numbers between 0 and n in comma separated form while n is input by console.
+Please write a program using generator to print the even numbers between 0 and n in comma separated form
+while n is input by console.
 
 Example:
 If the following n is given as input to the program:
