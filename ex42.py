@@ -1,6 +1,6 @@
 __author__ = 'royalfiish'
 
-lis = range(1, 4000, 1)
+lis = range(1, 100000)
 index = 0
 step = 0
 
@@ -25,7 +25,7 @@ def find(elem, arr):
         return find(elem, arr)
 
 
-print("Index is", find(1453, lis))
+print("Index is", find(1, lis))
 print("Steps", step)
 '''
 Question:
