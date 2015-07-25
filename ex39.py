@@ -1,5 +1,16 @@
 __author__ = 'royalfiish'
 
+inp = int(input("Enter n: "))
+
+
+def foo(n):
+    for i in range(0, n + 1):
+        if not i % 5 and not i % 7:
+            yield str(i)
+
+
+print(", ".join(foo(inp)))
+
 '''
 Question:
 
