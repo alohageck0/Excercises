@@ -1,4 +1,9 @@
+import random
+
 __author__ = 'royalfiish'
+
+lis = random.sample(range(100, 201), 5)
+print(lis)
 
 '''
 Question:
