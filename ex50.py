@@ -1,5 +1,11 @@
 __author__ = 'royalfiish'
+import zlib
 
+strin = b"hello world!hello world!hello world!hello world!"
+comp = zlib.compress(strin)
+print(comp)
+decomp = zlib.decompress(comp)
+print(decomp)
 '''
 Question:
 
