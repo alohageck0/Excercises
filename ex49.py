@@ -1,4 +1,8 @@
+import random
+
 __author__ = 'royalfiish'
+
+print(random.randrange(7, 16, 1))
 
 '''
 Question:
