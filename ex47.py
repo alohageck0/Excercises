@@ -1,4 +1,9 @@
+import random
+
 __author__ = 'royalfiish'
+
+lis = random.sample([x for x in range(100, 201) if not x % 2], 5)
+print(lis)
 
 '''
 Question:
