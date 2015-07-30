@@ -1,8 +1,10 @@
-__author__ = 'royalfiish'
+import random
+
+print(random.choice([x for x in range(0, 201) if not x % 5 and not x % 7]))
 
 '''
 Please write a program to output a random number, which is divisible by 5 and 7,
-between 0 and 10 inclusive using random module and list comprehension.
+between 0 and 200 inclusive using random module and list comprehension.
 
 
 
