@@ -15,11 +15,9 @@ def get_indecies(weight):
                 right += 3 ** item
                 index_dict[item] = 'R'
                 print('R')
-                if left > right:
+                if (left - right) >= 3 ** index_arr[item + 1]:
                     right = 0
-                    index_dict[item] = '-'
                     continue
-                elif
                 else:
                     break
 
@@ -28,7 +26,7 @@ def get_indecies(weight):
                 left += 3 ** item
                 index_dict[item] = 'L'
                 print('L')
-                if left < right:
+                if (right - left) >= 3 ** index_arr[item + 1]:
                     continue
                 else:
                     break
@@ -37,5 +35,5 @@ def get_indecies(weight):
     return index_dict
 
 
-x = get_indecies(4)
+x = get_indecies(3)
 print(x)
