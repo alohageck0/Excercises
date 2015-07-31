@@ -19,7 +19,6 @@ def get_indecies(weight):
                     right = 0
                     index_dict[item] = '-'
                     continue
-                elif
                 else:
                     break
 
