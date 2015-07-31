@@ -1,5 +1,28 @@
 __author__ = 'royalfiish'
 
+
+def gen_lis(n):
+    global mass
+    mass = [1]
+    while mass[-1] < n:
+        if mass[-1] * 3 < n:
+            mass.append(mass[-1] * 3)
+        else:
+            break
+    return mass
+
+
+def compare(weight):
+    global left_side
+    global right_side
+    left_side = weight
+    ostatok =
+    while not left == right:
+
+
+# def compare(left_weight):
+
+
 '''
 Peculiar balance
 ================
