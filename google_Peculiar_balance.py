@@ -11,13 +11,14 @@ def get_indecies(weight):
     index_dict = dict()
     left = weight
     right = 0
+    summ = 0
     index_arr = [i for i in range(100)]
     left_arr = []
     right_arr = []
     while True:
         if left > right:
             for item in index_arr:
-                summ = right
+                summ += right
                 right += 3 ** item
                 right_arr.append(item)
                 print('R')
