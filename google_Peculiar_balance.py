@@ -1,6 +1,3 @@
-__author__ = 'royalfiish'
-
-
 def answer(x):
     def summa_ostatka(n):
         summa = 0
@@ -40,6 +37,3 @@ def answer(x):
             index_dict[_] = "-"
             continue
     return list(index_dict.values())
-
-
-print(answer(24))
