@@ -38,7 +38,7 @@ def answer(x):
         elif (left + 3 ** _) > (right + summa_ostatka(_)):
             index_dict[_] = "-"
             continue
-    print(index_dict)
+    return list(index_dict.values())
 
 
-answer(23)
+print(answer(14))
