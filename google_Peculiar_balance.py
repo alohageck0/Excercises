@@ -21,24 +21,24 @@ def answer(x):
         right += 3 ** i
         if (left + summ) >= 3 ** i:
             max_ind = i
-            right_arr.append(max_ind)
     max_ind_arr = [x for x in range(max_ind)]
     right = 3 ** max_ind
+    index_dict[max_ind] = 'R'
     for _ in reversed(max_ind_arr):
         if left == right:
             break
-        elif (left + summa_ostatka(_)) <= right:
+        elif (left + summa_ostatka(_)) < right:
             left += 3 ** _
-            left_arr.append(_)
+            index_dict[_] = "L"
             continue
         elif (left + summa_ostatka(_)) > right:
+            right += 3 ** _
+            index_dict[_] = 'R'
             continue
         elif (left + 3 ** _) > (right + summa_ostatka(_)):
-            right += 3 ** _
-            right_arr.append(_)
+            index_dict[_] = "-"
             continue
-    print(right_arr)
-    print(left_arr)
+    print(index_dict)
 
 
-answer(2)
+answer(22)
