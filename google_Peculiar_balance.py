@@ -8,13 +8,10 @@ def answer(x):
             summa += 3 ** x
         return summa
 
-    summ = 0
     left = x
     right = 0
     index_arr = [i for i in range(100)]
     index_dict = dict()
-    left_arr = []
-    right_arr = []
     max_ind = int
     for i in index_arr:
         summ = right
@@ -41,4 +38,4 @@ def answer(x):
     return list(index_dict.values())
 
 
-print(answer(14))
+print(answer(8))
