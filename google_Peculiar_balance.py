@@ -18,10 +18,12 @@ def get_indecies(weight):
     while True:
         if left > right:
             for item in index_arr:
-                summ += right
                 right += 3 ** item
+                summ = right
                 right_arr.append(item)
                 print('R')
+                if left < right:
+                    break
                 if (left + summ) > right:
                     right = 0
                     right_arr = []
@@ -29,8 +31,7 @@ def get_indecies(weight):
                 elif (left + summ) == right:
                     left_arr = right_arr
                     right_arr = [item]
-                else:
-                    break
+                elif l
 
         # elif left < right:
         #     for item in index_arr:
