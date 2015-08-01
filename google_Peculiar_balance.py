@@ -41,4 +41,4 @@ def answer(x):
     print(index_dict)
 
 
-answer(22)
+answer(23)
