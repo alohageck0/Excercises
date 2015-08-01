@@ -23,7 +23,8 @@ def answer(x):
     index_dict[max_ind] = 'R'
     for _ in reversed(max_ind_arr):
         if left == right:
-            break
+            index_dict[_] = "-"
+            continue
         elif (left + summa_ostatka(_)) < right:
             left += 3 ** _
             index_dict[_] = "L"
@@ -41,4 +42,4 @@ def answer(x):
     return list(index_dict.values())
 
 
-print(answer(10))
+print(answer(24))
