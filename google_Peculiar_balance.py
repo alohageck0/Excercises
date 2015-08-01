@@ -38,4 +38,4 @@ def answer(x):
     return list(index_dict.values())
 
 
-print(answer(19))
+print(answer(8))
