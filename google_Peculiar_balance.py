@@ -1,5 +1,5 @@
 def answer(x):
-    def summa_ostatka(n):
+    def sum_remain(n):
         summa = 0
         for x in range(0, n):
             summa += 3 ** x
@@ -19,21 +19,22 @@ def answer(x):
     right = 3 ** max_ind
     index_dict[max_ind] = 'R'
     for _ in reversed(max_ind_arr):
+        remain___ = left + sum_remain(_)
         if left == right:
             index_dict[_] = "-"
             continue
-        elif (left + summa_ostatka(_)) < right:
+        elif remain___ < right:
             left += 3 ** _
             index_dict[_] = "L"
             continue
-        elif (left + summa_ostatka(_)) > right:
-            if (left + summa_ostatka(_)) < right + 3 ** _:
+        elif remain___ > right:
+            if remain___ < right + 3 ** _:
                 index_dict[_] = "-"
                 continue
             right += 3 ** _
             index_dict[_] = 'R'
             continue
-        elif (left + 3 ** _) > (right + summa_ostatka(_)):
+        elif (left + 3 ** _) > (right + sum_remain(_)):
             index_dict[_] = "-"
             continue
     return list(index_dict.values())
