@@ -29,6 +29,9 @@ def answer(x):
             index_dict[_] = "L"
             continue
         elif (left + summa_ostatka(_)) > right:
+            if (left + summa_ostatka(_)) < right + 3 ** _:
+                index_dict[_] = "-"
+                continue
             right += 3 ** _
             index_dict[_] = 'R'
             continue
@@ -38,4 +41,4 @@ def answer(x):
     return list(index_dict.values())
 
 
-print(answer(19))
+print(answer(10))
