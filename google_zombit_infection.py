@@ -25,7 +25,8 @@ def open_near(y, x):
 
 
 print(open_near(0, 0))
-test
+tes
+test1
 # def answer(population, x, y, strength=None):
 #     popilation[x][y] = -1
 #     for x_col in popilation:
