@@ -9,29 +9,29 @@ x_max_row = len(popilation[0])
 y_max_col = len(popilation)
 
 
-def find_neighbors(y, x):
-    coords = [[] for i in range(4)]
-    coords = [[x, y + 1], [x, y - 1], [x - 1, y], [x + 1, y]]
+def answer(population, y, x, strength=None):
+    def find_neighbors(x, y):
+        coords = [[] for i in range(4)]
+        coords = [[x, y + 1], [x, y - 1], [x - 1, y], [x + 1, y]]
 
-    def clean_arr(arr):
-        for i in arr:
-            for j in range(len(i)):
-                if i[j] < 0 or i[j] > x_max_row or i[j] > y_max_col:
-                    arr.remove(i)
-                    return clean_arr(arr)
+        def clean_arr(arr):
+            for i in arr:
+                for j in range(len(i)):
+                    if i[j] < 0 or i[j] > x_max_row or i[j] > y_max_col:
+                        arr.remove(i)
+                        return clean_arr(arr)
 
-    clean_arr(coords)
-    return coords
+        clean_arr(coords)
+        return coords
 
-
-print(find_neighbors(1, 3))
-
-# def answer(population, x, y, strength=None):
-#     popilation[x][y] = -1
-#     for x_col in popilation:
-#         for y_row in x_col:
-#             if popilation[x_col][y_row] == -1:
-#                 for x in range(1, 5):
+    if popilation[x][y] <= strength:
+        popilation[x][y] = -1
+    else:
+        return popilation
+    for x_col in popilation:
+        for y_row in x_col:
+            if popilation[x_col][y_row] == -1:
+                for x in range(1, 5):
 
 
 '''
