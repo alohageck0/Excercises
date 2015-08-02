@@ -9,14 +9,14 @@ x_max_row = len(popilation[0])
 y_max_col = len(popilation)
 
 
-def open_near(y, x):
+def find_neighbors(y, x):
     coords = [[] for i in range(4)]
     coords = [[x, y + 1], [x, y - 1], [x - 1, y], [x + 1, y]]
 
     def clean_arr(arr):
         for i in arr:
             for j in range(len(i)):
-                if i[j] < 0:
+                if i[j] < 0 or i[j] > x_max_row or i[j] > y_max_col:
                     arr.remove(i)
                     return clean_arr(arr)
 
@@ -24,7 +24,7 @@ def open_near(y, x):
     return coords
 
 
-print(open_near(0, 0))
+print(find_neighbors(1, 3))
 
 # def answer(population, x, y, strength=None):
 #     popilation[x][y] = -1
