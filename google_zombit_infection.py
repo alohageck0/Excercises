@@ -1,12 +1,13 @@
 __author__ = 'royalfiish'
 
-popilation = [[1, 2, 3],
+population = [[1, 2, 3],
               [2, 3, 4],
               [3, 2, 1],
               [1, 4, 5]]
 
-x_max_row = len(popilation[0])
-y_max_col = len(popilation)
+popul = [[6, 7, 2, 7, 6], [6, 3, 1, 4, 7], [0, 2, 4, 1, 10], [8, 1, 1, 4, 9], [8, 7, 4, 9, 9]]
+x_max_row = len(population[0])
+y_max_col = len(population)
 
 
 def answer(population, y, x, strength=None):
@@ -24,16 +25,24 @@ def answer(population, y, x, strength=None):
         clean_arr(coords)
         return coords
 
-    if popilation[x][y] <= strength:
-        popilation[x][y] = -1
+    if population[x][y] <= strength:
+        population[x][y] = -1
     else:
-        return popilation
-    for x_col in popilation:
-        for y_row in x_col:
-            if popilation[x_col][y_row] == -1:
-                for x in range(1, 5):
+        return population
+
+    for x_row in population:
+        for y_col in range(len(x_row)):
+            if x_row[y_col] == -1:
+                neighbors = find_neighbors(population.index(x_row), y_col)
+                for neighbor in neighbors:
+                    if population[neighbor[0]][neighbor[1]] <= strength:
+                        population[neighbor[0]][neighbor[1]] = -1
+    return population
 
 
+print(answer(population, 0, 0, 2))
+print(answer(popul, 2, 1, 5))
+print([[6, 7, -1, 7, 6], [6, -1, -1, -1, 7], [-1, -1, -1, -1, 10], [8, -1, -1, -1, 9], [8, 7, -1, 9, 9]])
 '''
 [[1, 2, 3], [2, 3, 4], [3, 2, 1]]
 

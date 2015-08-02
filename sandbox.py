@@ -24,4 +24,6 @@ def find_neighbors(y, x):
     return coords
 
 
-print(find_neighbors(0, 0))
+x = enumerate(popilation)
+for i in x:
+    print(i)
