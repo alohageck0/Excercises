@@ -1,5 +1,7 @@
 __author__ = 'royalfiish'
 
+lis = [12, 24, 35, 70, 88, 120, 155]
+print([x for (i, x) in enumerate(lis) if i not in [0, 2, 4, 6]])
 '''
 Question:
 
