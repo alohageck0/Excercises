@@ -1,5 +1,9 @@
 __author__ = 'royalfiish'
 
+lis = [12, 24, 35, 70, 88, 120, 155]
+x = [x for x in lis if x != 24]
+print(x)
+
 '''
 Question:
 
