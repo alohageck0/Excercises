@@ -18,13 +18,12 @@ def find_neighbors(x, y):
 
     def clean_arr(arr):
         for i in arr:
-            for j in range(len(i)):
-                if i[j] < 0 or i[j] > (x_max_row - 1) or i[j] > (y_max_col - 1):
-                    arr.remove(i)
-                    return clean_arr(arr)
+            if i[0] < 0 or i[1] < 0 or i[1] > (x_max_row - 1) or i[0] > (y_max_col - 1):
+                arr.remove(i)
+                return clean_arr(arr)
 
     clean_arr(coords)
     return coords
 
 
-print(find_neighbors(0, 2))
+print(find_neighbors(3, 0))

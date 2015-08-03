@@ -11,8 +11,8 @@ popula = [[6, 7, 2, 7, 6],
 def answer(population, y, x, strength):
     global popula
     popula = population
-    x_max_row = len(popula[0])
-    y_max_col = len(popula)
+    x_max_col = len(popula[0])
+    y_max_row = len(popula)
 
     def next_round(popul, iterx):
         global popula
@@ -32,10 +32,9 @@ def answer(population, y, x, strength):
 
         def clean_arr(arr):
             for i in arr:
-                for j in range(len(i)):
-                    if i[j] < 0 or i[j] > (x_max_row - 1) or i[j] > (y_max_col - 1):
-                        arr.remove(i)
-                        return clean_arr(arr)
+                if i[0] < 0 or i[1] < 0 or i[1] > (x_max_col - 1) or i[0] > (y_max_row - 1):
+                    arr.remove(i)
+                    return clean_arr(arr)
 
         clean_arr(coords)
         return coords
@@ -44,16 +43,16 @@ def answer(population, y, x, strength):
         popula[x][y] = -1
     else:
         return popula
-    if x_max_row >= y_max_col:
-        maxiter = x_max_row
+    if x_max_col >= y_max_row:
+        maxiter = x_max_col
     else:
-        maxiter = y_max_col
+        maxiter = y_max_row
     next_round(popula, maxiter)
 
     return popula
 
 
-first = answer(popula, 0, 5, 10)
+first = answer(popula, 4, 5, 10)
 for i in range(len(first)):
     print(first[i])
 
