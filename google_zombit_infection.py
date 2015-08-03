@@ -1,6 +1,11 @@
 __author__ = 'royalfiish'
 
-popula = [[2, 1], [2, 3]]
+popula = [[6, 7, 2, 7, 6],
+          [6, 3, 1, 4, 7],
+          [0, 2, 4, 1, 10],
+          [8, 1, 1, 4, 9],
+          [8, 7, 4, 9, 9],
+          [8, 7, 4, 9, 9]]
 
 
 def answer(population, y, x, strength):
@@ -12,7 +17,7 @@ def answer(population, y, x, strength):
     def next_round(popul, iterx):
         global popula
         popula = popul
-        for i in range(iterx):
+        for i in range(iterx + 1):
             for x_row in popula:
                 for y_col in range(len(x_row)):
                     if x_row[y_col] == -1:
@@ -48,7 +53,7 @@ def answer(population, y, x, strength):
     return popula
 
 
-first = answer(popula, 1, 0, 5)
+first = answer(popula, 0, 5, 10)
 for i in range(len(first)):
     print(first[i])
 
