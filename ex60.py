@@ -1,5 +1,17 @@
 __author__ = 'royalfiish'
 
+strin = 'abcdefgabc'
+count = dict()
+
+for letter in strin:
+    if not count.get(letter):
+        count[letter] = 1
+    else:
+        count[letter] += 1
+
+for k in sorted(count.keys()):
+    print(str(k) + ',' + str(count[k]))
+
 '''
 Question:
 
