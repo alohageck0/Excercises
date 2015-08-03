@@ -1,11 +1,6 @@
 __author__ = 'royalfiish'
 
-population = [[1, 2, 3],
-              [2, 3, 4],
-              [3, 2, 1],
-              [1, 4, 5]]
-
-popul = [[6, 7, 2, 7, 6], [6, 3, 1, 4, 7], [0, 2, 4, 1, 10], [8, 1, 1, 4, 9], [8, 7, 4, 9, 9]]
+population = [[6, 7, 2, 7, 6], [6, 3, 1, 4, 7], [0, 2, 4, 1, 10], [8, 1, 1, 4, 9], [8, 7, 4, 9, 9]]
 x_max_row = len(population[0])
 y_max_col = len(population)
 
@@ -52,10 +47,9 @@ def answer(popul, y, x, strength=None):
     return population
 
 
-print(answer(population, 0, 0, 2))
-first = answer(popul, 2, 1, 5)
-for i in range(len(first)):
-    print(first[i])
+first = answer(population, 2, 1, 5)
+# for i in range(len(first)):
+#     print(first[i])
 print([[6, 7, -1, 7, 6], [6, -1, -1, -1, 7], [-1, -1, -1, -1, 10], [8, -1, -1, -1, 9], [8, 7, -1, 9, 9]])
 '''
 [[1, 2, 3], [2, 3, 4], [3, 2, 1]]
