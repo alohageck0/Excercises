@@ -4,11 +4,12 @@ popilation = [[1, 2, 3],
               [2, 3, 4],
               [3, 2, 1],
               [1, 4, 5]]
+popil = [[6, 7, -1, 7, 6], [6, -1, -1, -1, 7], [-1, -1, -1, -1, 10], [8, -1, -1, -1, 9], [8, 7, -1, 9, 9]]
+x_max_row = len(popil[0])
+y_max_col = len(popil)
 
-x_max_row = len(popilation[0])
-y_max_col = len(popilation)
-
-
+print(x_max_row)
+print(y_max_col)
 def find_neighbors(y, x):
     coords = [[] for i in range(4)]
     coords = [[x, y + 1], [x, y - 1], [x - 1, y], [x + 1, y]]
@@ -24,6 +25,4 @@ def find_neighbors(y, x):
     return coords
 
 
-x = enumerate(popilation)
-for i in x:
-    print(i)
+print(find_neighbors(2, 3))
