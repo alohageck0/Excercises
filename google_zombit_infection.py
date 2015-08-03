@@ -9,16 +9,17 @@ def answer(popul, y, x, strength=None):
     global population
     population = popul
 
-    def next_round(popul):
+    def next_round(popul, iterx):
         global population
         population = popul
-        for x_row in population:
-            for y_col in range(len(x_row)):
-                if x_row[y_col] == -1:
-                    neighbors = find_neighbors(population.index(x_row), y_col)
-                    for neighbor in neighbors:
-                        if population[neighbor[0]][neighbor[1]] <= strength:
-                            population[neighbor[0]][neighbor[1]] = -1
+        for i in range(iterx):
+            for x_row in population:
+                for y_col in range(len(x_row)):
+                    if x_row[y_col] == -1:
+                        neighbors = find_neighbors(population.index(x_row), y_col)
+                        for neighbor in neighbors:
+                            if population[neighbor[0]][neighbor[1]] <= strength:
+                                population[neighbor[0]][neighbor[1]] = -1
 
     def find_neighbors(x, y):
         coords = [[] for i in range(4)]
@@ -27,7 +28,7 @@ def answer(popul, y, x, strength=None):
         def clean_arr(arr):
             for i in arr:
                 for j in range(len(i)):
-                    if i[j] < 0 or i[j] > x_max_row or i[j] > y_max_col:
+                    if i[j] < 0 or i[j] > (x_max_row - 1) or i[j] > (y_max_col - 1):
                         arr.remove(i)
                         return clean_arr(arr)
 
@@ -38,7 +39,11 @@ def answer(popul, y, x, strength=None):
         population[x][y] = -1
     else:
         return population
-    next_round(population)
+    if x_max_row >= y_max_col:
+        maxiter = x_max_row
+    else:
+        maxiter = y_max_col
+    next_round(population, maxiter)
 
     return population
 
@@ -46,6 +51,7 @@ def answer(popul, y, x, strength=None):
 first = answer(population, 2, 1, 5)
 # for i in range(len(first)):
 #     print(first[i])
+print(first)
 print([[6, 7, -1, 7, 6], [6, -1, -1, -1, 7], [-1, -1, -1, -1, 10], [8, -1, -1, -1, 9], [8, 7, -1, 9, 9]])
 '''
 [[1, 2, 3], [2, 3, 4], [3, 2, 1]]
