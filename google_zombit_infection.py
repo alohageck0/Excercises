@@ -9,17 +9,16 @@ def answer(popul, y, x, strength=None):
     global population
     population = popul
 
-    def next_round(popul, max_iter):
+    def next_round(popul):
         global population
         population = popul
-        for i in range(max_iter):
-            for x_row in population:
-                for y_col in range(len(x_row)):
-                    if x_row[y_col] == -1:
-                        neighbors = find_neighbors(population.index(x_row), y_col)
-                        for neighbor in neighbors:
-                            if population[neighbor[0]][neighbor[1]] <= strength:
-                                population[neighbor[0]][neighbor[1]] = -1
+        for x_row in population:
+            for y_col in range(len(x_row)):
+                if x_row[y_col] == -1:
+                    neighbors = find_neighbors(population.index(x_row), y_col)
+                    for neighbor in neighbors:
+                        if population[neighbor[0]][neighbor[1]] <= strength:
+                            population[neighbor[0]][neighbor[1]] = -1
 
     def find_neighbors(x, y):
         coords = [[] for i in range(4)]
@@ -39,10 +38,7 @@ def answer(popul, y, x, strength=None):
         population[x][y] = -1
     else:
         return population
-    if x_max_row >= y_max_col:
-        next_round(population, x_max_row)
-    elif x_max_row < y_max_col:
-        next_round(population, y_max_col)
+    next_round(population)
 
     return population
 
