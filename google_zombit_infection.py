@@ -4,7 +4,6 @@ popula = [[6, 7, 2, 7, 6],
           [6, 3, 1, 4, 7],
           [0, 2, 4, 1, 10],
           [8, 1, 1, 4, 9],
-          [8, 7, 4, 9, 9],
           [8, 7, 4, 9, 9]]
 
 
@@ -52,7 +51,7 @@ def answer(population, y, x, strength):
     return popula
 
 
-first = answer(popula, 4, 5, 10)
+first = answer(popula, 4, 4, 10)
 for i in range(len(first)):
     print(first[i])
 
