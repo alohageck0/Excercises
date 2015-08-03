@@ -1,5 +1,11 @@
 __author__ = 'royalfiish'
 
+legs = int
+for i in range(1, 36):
+    if 2 * i + (35 - i) * 4 == 94:
+        print('Chicken:', i, "Rabbits", 35 - i)
+    else:
+        continue
 '''
 Question:
 
