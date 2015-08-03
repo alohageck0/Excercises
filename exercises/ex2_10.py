@@ -1,5 +1,5 @@
 __author__ = 'royalfiish'
-import ex26
+from exercises import ex26
 
 a, b = ['4', '6']
 

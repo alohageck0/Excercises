@@ -1,5 +1,5 @@
 __author__ = 'royalfiish'
-import ex21
+from exercises import ex21
 
 
 def print_doc(func):
