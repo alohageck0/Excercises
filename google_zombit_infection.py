@@ -50,8 +50,6 @@ def answer(popul, y, x, strength=None):
 
 
 first = answer(population, 2, 1, 5)
-# for i in range(len(first)):
-#     print(first[i])
 print(first)
 print([[6, 7, -1, 7, 6], [6, -1, -1, -1, 7], [-1, -1, -1, -1, 10], [8, -1, -1, -1, 9], [8, 7, -1, 9, 9]])
 
