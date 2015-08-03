@@ -1,7 +1,6 @@
 __author__ = 'royalfiish'
 
-popula = [[6, 7, 2, 7, 6], [6, 3, 1, 4, 7], [0, 2, 4, 1, 10], [8, 1, 1, 4, 9], [8, 7, 4, 9, 9]]
-population1 = [[1, 2, 3], [2, 3, 4], [3, 2, 1]]
+popula = [[2, 1], [2, 3]]
 
 
 def answer(population, y, x, strength):
@@ -49,11 +48,10 @@ def answer(population, y, x, strength):
     return popula
 
 
-first = answer(popula, 2, 1, 5)
-print(first)
-print([[6, 7, -1, 7, 6], [6, -1, -1, -1, 7], [-1, -1, -1, -1, 10], [8, -1, -1, -1, 9], [8, 7, -1, 9, 9]])
+first = answer(popula, 1, 0, 5)
+for i in range(len(first)):
+    print(first[i])
 
-print(answer(population1, 0, 0, 2))
 '''
 [[1, 2, 3], [2, 3, 4], [3, 2, 1]]
 
