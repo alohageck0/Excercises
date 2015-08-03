@@ -1,5 +1,9 @@
 __author__ = 'royalfiish'
 
+strin = input("Enter string: ")
+strin1 = strin[::-1]
+
+print(strin1)
 '''
 Question:
 
