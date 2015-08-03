@@ -1,13 +1,14 @@
 __author__ = 'royalfiish'
 
 population = [[6, 7, 2, 7, 6], [6, 3, 1, 4, 7], [0, 2, 4, 1, 10], [8, 1, 1, 4, 9], [8, 7, 4, 9, 9]]
-x_max_row = len(population[0])
-y_max_col = len(population)
+population1 = [[1, 2, 3], [2, 3, 4], [3, 2, 1]]
 
 
 def answer(popul, y, x, strength=None):
     global population
     population = popul
+    x_max_row = len(population[0])
+    y_max_col = len(population)
 
     def next_round(popul, iterx):
         global population
@@ -53,6 +54,8 @@ first = answer(population, 2, 1, 5)
 #     print(first[i])
 print(first)
 print([[6, 7, -1, 7, 6], [6, -1, -1, -1, 7], [-1, -1, -1, -1, 10], [8, -1, -1, -1, 9], [8, 7, -1, 9, 9]])
+
+print(answer(population1, 0, 0, 2))
 '''
 [[1, 2, 3], [2, 3, 4], [3, 2, 1]]
 
