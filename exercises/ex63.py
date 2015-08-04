@@ -7,6 +7,7 @@ for i in range(1, 36):
         print('Chicken:', i, "Rabbits:", i_)
     else:
         continue
+
 '''
 Question:
 
