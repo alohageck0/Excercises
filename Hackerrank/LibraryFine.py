@@ -1,21 +1,29 @@
 __author__ = 'royalfiish'
+from datetime import datetime
+
+
+def check(date):
+    if int(act_date.strftime(date)) == int(exp_date.strftime(date)):
+        return True
+    else:
+        return False
+
 
 actual = input()
+act_date = datetime.strptime(actual, '%d %m %Y')
 arr_act = actual.split(' ')
 expected = input()
+exp_date = datetime.strptime(expected, '%d %m %Y')
 arr_exp = expected.split(' ')
-total = 0
-if actual == expected or (
-                    int(arr_act[0]) < int(arr_exp[0]) and int(arr_act[1]) == int(arr_exp[1]) and int(arr_act[2]) == int(
-            arr_exp[2])) or int(arr_act[1]) < int(arr_exp[1]) or int(arr_act[2]) < int(arr_exp[2]):
+if act_date <= exp_date:
     print(0)
 else:
-    if not int(arr_act[0]) == int(arr_exp[0]):
-        razn1 = int(arr_act[0]) - int(arr_exp[0])
-        total = razn1 * 15
-    if not int(arr_act[1]) == int(arr_exp[1]):
-        razn1 = int(arr_act[1]) - int(arr_exp[1])
-        total = razn1 * 500
-    if not int(arr_act[2]) == int(arr_exp[2]):
+    if not check('%Y'):
         total = 10000
-print(total)
+    elif not check('%m'):
+        razn1 = int(act_date.strftime('%m')) - int(exp_date.strftime('%m'))
+        total = razn1 * 500
+    elif not check('%d'):
+        razn1 = int(act_date.strftime('%d')) - int(exp_date.strftime('%d'))
+        total = razn1 * 15
+    print(total)
