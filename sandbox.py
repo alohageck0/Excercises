@@ -1,29 +1,11 @@
-__author__ = 'royalfiish'
+import string
 
-popilation = [[1, 2, 3],
-              [2, 3, 4],
-              [3, 2, 1],
-              [1, 4, 5]]
-# popil = [[6, 7, -1, 7, 6], [6, -1, -1, -1, 7], [-1, -1, -1, -1, 10], [8, -1, -1, -1, 9], [8, 7, -1, 9, 9]]
-x_max_row = len(popilation[0])
-y_max_col = len(popilation)
-
-print(x_max_row)
-print(y_max_col)
-
-
-def find_neighbors(x, y):
-    coords = [[] for i in range(4)]
-    coords = [[x, y + 1], [x, y - 1], [x - 1, y], [x + 1, y]]
-
-    def clean_arr(arr):
-        for i in arr:
-            if i[0] < 0 or i[1] < 0 or i[1] > (x_max_row - 1) or i[0] > (y_max_col - 1):
-                arr.remove(i)
-                return clean_arr(arr)
-
-    clean_arr(coords)
-    return coords
-
-
-print(find_neighbors(3, 0))
+length = 10
+strin = 'www.abc.xy'
+k = 87
+lower = string.ascii_lowercase
+upper = string.ascii_uppercase
+strin1 = []
+print(len(lower), len(upper))
+print(upper.index('W'))
+print(87 % 26)
