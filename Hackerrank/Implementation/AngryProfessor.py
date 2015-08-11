@@ -1,8 +1,8 @@
 __author__ = 'royalfiish'
 
 loops = int(input())
-early = 0
 for i in range(loops):
+    early = 0
     cond = [int(x) for x in input().split(' ')]
     students = [int(x) for x in input().split(' ')]
     for _ in students:
