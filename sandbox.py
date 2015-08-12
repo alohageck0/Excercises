@@ -1,11 +1,6 @@
-import string
-
-length = 10
-strin = 'www.abc.xy'
-k = 87
-lower = string.ascii_lowercase
-upper = string.ascii_uppercase
-strin1 = []
-print(len(lower), len(upper))
-print(upper.index('W'))
-print(87 % 26)
+act3 = 3
+act5 = 3
+if not act3 % 5 and not act5 % 3:
+    print('\n divisible')
+else:
+    print('NO')
