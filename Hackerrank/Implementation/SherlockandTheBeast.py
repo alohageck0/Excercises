@@ -7,6 +7,7 @@ lis = []
 newlis = []
 
 
+# todo try generator
 def checkNumber(num):
     check = True
     numStr = str(num)
