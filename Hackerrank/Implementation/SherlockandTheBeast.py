@@ -1,80 +1,16 @@
 __author__ = 'royalfiish'
 
-# loops = int(input())
-# for i in range(loops):
-#     number = int(input())
-lis = []
-newlis = []
+loops = int(input())
+for i in range(loops):
+    numberdigits = int(input())
+    fives = numberdigits // 3
+    threes = numberdigits - fives * 3
 
-
-# todo try generator
-# def checkNumber(num):
-#     check = True
-#     numStr = str(num)
-#     for k in range(len(numStr)):
-#         if not numStr[k] in ['3', '5']:
-#             check = False
-#     return check
-def check3(strdigit):
-    if strdigit == '3':
-        return True
+    if not threes % 5:
+        print('555' * fives + '33333' * threes)
+        # print(threes)
+    elif not numberdigits % 5:
+        threes = numberdigits // 5
+        print('33333' * threes)
     else:
-        return False
-
-
-def check5(strdigit):
-    if strdigit == '5':
-        return True
-    else:
-        return False
-
-
-def generateNum(num):
-    i = 10 ** (num - 1)
-    while i <= 10 ** num:
-        check = True
-        while check:
-            for k in str(i):
-                if check3(k) or check5(k):
-                    continue
-                else:
-                    check = False
-                    break
-            i += 1
-        yield i
-
-
-for i in generateNum(11):
-    lis.append(i)
-print(lis)
-# def check35(num):
-#     numStr = str(num)
-#     act3 = 0
-#     act5 = 0
-#     for k in numStr:
-#         if k == '3':
-#             act3 += 1
-#         elif k == '5':
-#             act5 += 1
-#     if act3 >= 5 or act5 >= 3 or (act3 >= 5 and act5 >= 3):
-#         if (not act3 % 5 and act5 == 0) or (not act5 % 3 and act3 == 0) or not act3 % 5 or not act5 % 3:
-#             # print("act3 = ", act3)
-#             # print("act5 = ", act5)
-#             return True
-#         else:
-#             return False
-#     else:
-#         return False
-#
-#
-# for j in range(10 ** (number - 1), 10 ** (number)):
-#     if checkNumber(j):
-#         lis.append(j)
-#
-# for item in lis:
-#     if check35(item):
-#         newlis.append(item)
-# if len(newlis) == 0:
-#     print(-1)
-# else:
-#     print(max(newlis))
+        print(-1)
