@@ -41,4 +41,3 @@ for j in range(10 ** (number - 1), 10 ** (number)):
 #     else:
 #         lis.remove(item)
 print(lis)
-print(check35(lis[3]))
