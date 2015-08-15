@@ -11,12 +11,12 @@ def count(num):
         if (fives * 3 + threes * 5) == num:
             arr['fives'] = fives
             arr['threes'] = threes
+            return arr
             break
         else:
             fives -= 1
             threes += 1
             continue
-    return arr
 
 
 for i in range(loops):
