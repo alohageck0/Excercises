@@ -4,33 +4,24 @@ loops = int(input())
 
 
 def count(num):
-    if num < 5:
+    if num <= 5:
         if num == 3:
             return '555'
+        elif num == 5:
+            return '33333'
         else:
             return -1
     arr = dict()
     fives = num // 3
     threes = 0
     while True:
-        if (fives * 3 + threes * 5) > num:
-            fives -= 1
-            continue
-        if (fives * 3 + threes * 5) and fives > 0 == num:
-            arr['fives'] = fives
+        ost = (num - threes * 5)
+        if not ost % 3:
+            arr['fives'] = ost // 3
             arr['threes'] = threes
             return arr
-            break
-        elif threes * 5 == num:
-            arr['fives'] = 0
-            arr['threes'] = threes
-            return arr
-            break
-        elif fives < 0:
-            return -1
             break
         else:
-            fives -= 1
             threes += 1
             continue
 
