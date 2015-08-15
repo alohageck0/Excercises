@@ -16,7 +16,7 @@ def count(num):
         if (fives * 3 + threes * 5) > num:
             fives -= 1
             continue
-        if (fives * 3 + threes * 5) == num:
+        if (fives * 3 + threes * 5) and fives > 0 == num:
             arr['fives'] = fives
             arr['threes'] = threes
             return arr
