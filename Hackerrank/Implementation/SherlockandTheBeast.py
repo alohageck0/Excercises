@@ -21,7 +21,6 @@ def count(num):
             arr['fives'] = ost // 3
             arr['threes'] = threes
             return arr
-            break
         else:
             threes += 1
             continue
