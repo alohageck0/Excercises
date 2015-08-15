@@ -29,7 +29,9 @@ def count(num):
 for i in range(loops):
     numberdigits = int(input())
     dic = count(numberdigits)
+    fives = '555' * dic['fives']
+    threes = '33333' * dic['threes']
     if type(dic) == dict:
-        print('555' * dic['fives'] + '33333' * dic['threes'])
+        print(fives + threes)
     else:
         print(dic)
