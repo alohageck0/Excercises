@@ -1,7 +1,21 @@
-act3 = 3
-act5 = 3
-if not act3 % 5 and not act5 % 3:
-    print('\n divisible')
-else:
-    print('NO')
-print()
+def count(num):
+    arr = dict()
+    fives = num // 3
+    threes = 0
+    while True:
+        if (fives * 3 + threes * 5) == num:
+            arr['fives'] = fives
+            arr['threes'] = threes
+            break
+        else:
+            fives -= 1
+            threes += 1
+            continue
+    return arr
+
+
+for i in range(1):
+    numberdigits = 11
+
+    dic = count(numberdigits)
+    print('555' * dic['fives'] + '33333' * dic['threes'])
