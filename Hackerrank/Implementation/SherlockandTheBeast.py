@@ -12,10 +12,11 @@ def count(num):
         else:
             return -1
     arr = dict()
-    fives = num // 3
     threes = 0
     while True:
         ost = (num - threes * 5)
+        if ost < 0:
+            return -1
         if not ost % 3:
             arr['fives'] = ost // 3
             arr['threes'] = threes
