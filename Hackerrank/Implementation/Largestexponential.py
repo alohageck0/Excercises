@@ -26,7 +26,8 @@ def find_max_base(arr):
             maxBase = i[0]
     return maxBase
 
-# indexes = []
-# for i in range(loops):
-#     arr = [int(x) for x in input().split(' ')]
-#     indexes.append(arr)
+
+inps = []
+for i in range(loops - 1):
+    arr = [int(x) for x in input().split(' ')]
+    inps.append(arr)
