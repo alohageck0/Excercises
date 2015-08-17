@@ -1,10 +1,6 @@
-__author__ = 'royalfiish'
+import math
 
 loops = int(input())
-
-testarr = [[3, 4],
-           [2, 3],
-           [4, 1]]
 
 
 def find_index(arr, num):
@@ -28,6 +24,18 @@ def find_max_base(arr):
 
 
 inps = []
-for i in range(loops - 1):
+for i in range(loops):
     arr = [int(x) for x in input().split(' ')]
     inps.append(arr)
+position = int(input())
+base = find_max_base(inps)
+
+for arr in inps:
+    if arr[0] != base:
+        koef = math.log(base, arr[0])
+        arr.append(arr[1] / koef)
+    else:
+        arr.append(arr[1])
+
+new_list = sorted(inps, key=lambda x: x[2])
+print(str(new_list[position - 1][0]) + ' ' + str(new_list[position - 1][1]))
