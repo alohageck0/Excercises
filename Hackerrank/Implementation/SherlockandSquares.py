@@ -16,12 +16,11 @@ for i in range(loops):
     count = 0
     arr = [int(x) for x in input().split(' ')]
     if findFirstSquare(arr[0], arr[1]):
-        count = 1
         first = findFirstSquare(arr[0], arr[1])
     else:
         print(count)
         continue
     while first ** 2 <= arr[1]:
-        first = first ** 2 + first * 2 + 1
+        first += 1
         count += 1
     print(count)
