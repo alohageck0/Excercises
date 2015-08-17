@@ -1,33 +1,33 @@
-__author__ = 'royalfiish'
+import math
 
-loops = int(input())
+
+# loops = int(input())
 
 testarr = [[3, 4],
            [2, 3],
            [4, 1]]
 
+first = [int(x) for x in input().split(' ')]
+count = 1
 
-def find_index(arr, num):
-    """
-
-    :param arr - list of inputs:
-    :param num - number to find index:
-    :return index of element:
-    """
-    for i in arr:
-        if i[0] == num:
-            return arr.index(i)
+second = [int(x) for x in input().split(' ')]
 
 
-def find_max_base(arr):
-    maxBase = arr[0][0]
-    for i in arr:
-        if i[0] >= maxBase:
-            maxBase = i[0]
-    return maxBase
+def find_power(first, second):
+    firstBase = first[0]
+    secondBase = second[0]
+    if firstBase != secondBase:
+        power = math.log(firstBase, secondBase)
+    return power
 
 
-inps = []
-for i in range(loops - 1):
-    arr = [int(x) for x in input().split(' ')]
-    inps.append(arr)
+new_power = second[1] / find_power(first, second)
+if first[1] > new_power:
+    print('first bigger')
+else:
+    print('second bigger')
+
+# inps = []
+# for i in range(loops - 1):
+#     arr = [int(x) for x in input().split(' ')]
+#     inps.append(arr)
