@@ -1,52 +1,40 @@
-__author__ = 'royalfiish'
+def answer(x):
+    def sum_remain(n):
+        summa = 0
+        for x in range(0, n):
+            summa += 3 ** x
+        return summa
 
-
-def get_indecies(weight):
-    global left
-    global right
-    global left_arr
-    global right_arr
-    global summ
-    global index_dict
-    index_dict = dict()
-    left = weight
+    left = x
     right = 0
-    summ = 0
     index_arr = [i for i in range(100)]
-    left_arr = []
-    right_arr = []
-    while True:
-        if left > right:
-            for item in index_arr:
-                right += 3 ** item
-                summ = right
-                right_arr.append(item)
-                print('R')
-                if left < right:
-                    break
-                if (left + summ) > right:
-                    right = 0
-                    right_arr = []
-                    continue
-                elif (left + summ) == right:
-                    left_arr = right_arr
-                    right_arr = [item]
-                elif l
-
-        # elif left < right:
-        #     for item in index_arr:
-        #         left += 3 ** item
-        #         left_arr[item] = 'L'
-        #         print('L')
-        #         if (right - left) >= 3 ** index_arr[item + 1]:
-        #             continue
-        #         else:
-        #             break
-        elif left == right:
-            break
-
-    print(right_arr)
-
-
-x = get_indecies(3)
-print(x)
+    index_dict = dict()
+    max_ind = int
+    for i in index_arr:
+        summ = right
+        right += 3 ** i
+        if (left + summ) >= 3 ** i:
+            max_ind = i
+    max_ind_arr = [x for x in range(max_ind)]
+    right = 3 ** max_ind
+    index_dict[max_ind] = 'R'
+    for _ in reversed(max_ind_arr):
+        remain___ = left + sum_remain(_)
+        if left == right:
+            index_dict[_] = "-"
+            continue
+        elif remain___ < right:
+            left += 3 ** _
+            index_dict[_] = "L"
+            continue
+        elif remain___ > right:
+            if remain___ < right + 3 ** _:
+                index_dict[_] = "-"
+                continue
+            right += 3 ** _
+            index_dict[_] = 'R'
+            continue
+        elif (left + 3 ** _) > (right + sum_remain(_)):
+            index_dict[_] = "-"
+            continue
+    return list(index_dict.values())
