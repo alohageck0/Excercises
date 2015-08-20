@@ -11,7 +11,10 @@ for i in range(1, len):
                 arr[j] = element
                 break
             else:
-                arr[j] = arr[j - 1]
+                if j == 0:
+                    arr[j] = element
+                else:
+                    arr[j] = arr[j - 1]
                 continue
         print(' '.join([str(x) for x in arr]))
 
