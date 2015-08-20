@@ -2,12 +2,11 @@ arr = [1, 4, 3, 5, 6, 2]
 len = len(arr)
 # len = int(input())
 # arr = [int(x) for x in input().split(' ')]
-for i in range(len - 1):
-    element = arr[i + 1]
-    newlen = i + 1
-    if element < arr[i]:
-        arr[i + 1] = arr[i]
-        for j in reversed(range(newlen)):
+for i in range(1, len):
+    element = arr[i]
+    if element < arr[i - 1]:
+        arr[i] = arr[i - 1]
+        for j in reversed(range(i)):
             if arr[j - 1] < element:
                 arr[j] = element
                 break
