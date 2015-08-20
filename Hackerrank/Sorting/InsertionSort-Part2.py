@@ -1,4 +1,4 @@
-arr = [1, 4, 3, 5, 6, 2]
+arr = [9, 8, 6, 7, 3, 5, 4, 1, 2]
 len = len(arr)
 # len = int(input())
 # arr = [int(x) for x in input().split(' ')]
