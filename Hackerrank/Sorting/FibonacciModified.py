@@ -15,6 +15,5 @@ def fibon(fir, secon):
         fir = secon
         return fibon(fir, sec)
 
-
 fibon(0, 1)
 print(fibo)
