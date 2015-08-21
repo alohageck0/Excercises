@@ -1,20 +1,20 @@
-arr = [int(x) for x in input().split(' ')]
-first = int
-sec = int
-number = int
+# arr = [int(x) for x in input().split(' ')]
+number = 0
+num = 5
+fibo = []
 
 
-def fibon(fir, secon, num):
+def fibon(fir, secon):
     global number
-    global first
-    global sec
-    first = fir
-    sec = secon
+    global num
+    global fibo
     if number <= num:
-        sec = sec ** 2 + first
-        first = sec
+        sec = secon ** 2 + fir
         number += 1
-        return sec, number
+        fibo.append(sec)
+        fir = secon
+        return fibon(fir, sec)
 
 
-print(fibon(first, sec, 3))
+fibon(0, 1)
+print(fibo)
