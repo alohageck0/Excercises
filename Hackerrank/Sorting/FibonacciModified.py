@@ -1,19 +1,20 @@
+arr = [0, 1, 5]
 # arr = [int(x) for x in input().split(' ')]
-number = 0
-num = 5
-fibo = []
+number = 2
+num = arr[2]
+fibo = [arr[0], arr[1]]
 
 
-def fibon(fir, secon):
+def fibon(arr):
     global number
     global num
     global fibo
     if number <= num:
-        sec = secon ** 2 + fir
+        sec = arr[-1] ** 2 + arr[-2]
         number += 1
         fibo.append(sec)
-        fir = secon
-        return fibon(fir, sec)
+        return fibon(fibo)
 
-fibon(0, 1)
-print(fibo)
+
+fibon(fibo)
+print(fibo[num - 1])
