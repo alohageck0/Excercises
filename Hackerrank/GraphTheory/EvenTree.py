@@ -5,4 +5,4 @@ arr = [10, 9]
 #     edges.append(tuple([int(x) for x in input().split(' ')]))
 children = dict
 for edge in reversed(edges):
-    print()
+    ss
