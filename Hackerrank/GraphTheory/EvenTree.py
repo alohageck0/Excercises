@@ -4,5 +4,8 @@ arr = [10, 9]
 # for i in range(arr[1]):
 #     edges.append(tuple([int(x) for x in input().split(' ')]))
 # for edge in reversed(edges):
-matrix = [x for x in range(10)]
-print(matrix)
+matrix = [[0 for x in range(10)] for x in range(10)]
+for edge in edges:
+    matrix[edge[1] - 1][edge[0] - 1] = 1
+for i in matrix:
+    print(i)
