@@ -3,5 +3,6 @@ arr = [10, 9]
 # # arr = [int(x) for x in input().split(' ')]
 # for i in range(arr[1]):
 #     edges.append(tuple([int(x) for x in input().split(' ')]))
-children = dict
 # for edge in reversed(edges):
+matrix = [x for x in range(10)]
+print(matrix)
