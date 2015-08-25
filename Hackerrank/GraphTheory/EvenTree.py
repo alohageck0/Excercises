@@ -10,7 +10,7 @@ arr = [10, 9]
 # for i in matrix:
 #    print(i)
 
-edges_d = dict
+edges_d = dict()
 # for edge in edges:
 #    edges_d[edge[1]] = edge[0]
 print(edges_d)
