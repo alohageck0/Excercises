@@ -30,6 +30,7 @@ def count_child(start, dict1):
         count += 0
     # todo for node in start loop thru keys to add length
 
+
     # if
     #     count = 0
     #     # for node in dict1.get(key):
