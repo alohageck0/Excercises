@@ -7,6 +7,10 @@ arr = [10, 9]
 #     edges.append(tuple([int(x) for x in input().split(' ')]))
 
 # {8: [9, 10], 1: [2, 3, 6], 2: [5, 7], 3: [4], 6: [8]}
+class Graph:
+    def __init__(self, list1):
+        self.edges = list1
+
 
 def make_dic(edges):
     edges_d = dict()
@@ -22,11 +26,18 @@ vertices = make_dic(edges)
 
 
 # print(vertices.get(9))
+def children_of_node(node):
+    """
+    returns list of values of 'node' key
+    :param node:
+    :return:
+    """
+    return
 
 
-def count_child(start, dict1):
-    count = 0
-    if start not in dict1.keys():
+def count_child(node, dict1):
+    count = []
+    if node not in dict1.keys():
         count += 0
     # todo for node in start loop thru keys to add length
 
