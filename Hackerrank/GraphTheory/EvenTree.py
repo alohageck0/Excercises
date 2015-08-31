@@ -45,4 +45,13 @@ def count_child(node, dict1):
     #     # for node in dict1.get(key):
     return count
 
+
 # print(count_child(8, vertices))
+# for node in range(arr[0]):
+#     count = int
+#     children = foo()
+#     if not children % 2:
+#         count += 1
+#     else:
+#         continue
+# print(count)
