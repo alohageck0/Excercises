@@ -11,24 +11,29 @@ class Graph:
     def __init__(self, list1):
         self.edges = list1
         self.edges_d = dict()
+        self.final = []
         for edge in self.edges:
             if not edge[1] in self.edges_d.keys():
                 self.edges_d[edge[1]] = [edge[0]]
             else:
                 self.edges_d.get(edge[1]).append(edge[0])
 
-    def children_of_node(self):
+    def children_of_node(self, node):
         """
             returns list of values of 'node' key
             :param node:
             :return:
             """
-        return
+        temp = self.edges_d.get(node)
+        for i in temp:
+            self.final.append(i)
 
 
 # todo try store dict in class variable and create method which returns amount of childs of any node
 test = Graph(edges)
 print(test.edges_d)
+
+
 def count_child(node, dict1):
     count = []
     if node not in dict1.keys():
