@@ -8,7 +8,8 @@ arr = [10, 9]
 
 # {8: [9, 10], 1: [2, 3, 6], 2: [5, 7], 3: [4], 6: [8]}
 class Graph:
-    def __init__(self, list1):
+    def __init__(self, list1, arr1):
+        self.arr = arr1
         self.edges = list1
         self.edges_d = dict()
         self.final = []
@@ -28,10 +29,16 @@ class Graph:
         for i in temp:
             self.final.append(i)
 
+    def count_nodes(self, node):
+        if node not in self.edges_d.keys():
+            return 0
+        else:
+            return len(self.edges_d.get(node))
+
 
 # todo try store dict in class variable and create method which returns amount of childs of any node
-test = Graph(edges)
-print(test.edges_d)
+test = Graph(edges, arr)
+print(test.count_nodes(1))
 
 
 def count_child(node, dict1):
@@ -44,7 +51,6 @@ def count_child(node, dict1):
     #     count = 0
     #     # for node in dict1.get(key):
     return count
-
 
 # print(count_child(8, vertices))
 # for node in range(arr[0]):
