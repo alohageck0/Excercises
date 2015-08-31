@@ -11,35 +11,30 @@ class Graph:
     def __init__(self, list1):
         self.edges = list1
 
+    def make_dic(self):
+        edges_d = dict()
+        for edge in self.edges:
+            if not edge[1] in edges_d.keys():
+                edges_d[edge[1]] = [edge[0]]
+            else:
+                edges_d.get(edge[1]).append(edge[0])
+        return edges_d
 
-def make_dic(edges):
-    edges_d = dict()
-    for edge in edges:
-        if not edge[1] in edges_d.keys():
-            edges_d[edge[1]] = [edge[0]]
-        else:
-            edges_d.get(edge[1]).append(edge[0])
-    return edges_d
+    def children_of_node(self):
+        """
+            returns list of values of 'node' key
+            :param node:
+            :return:
+            """
+        return
 
 
-vertices = make_dic(edges)
-
-
-# print(vertices.get(9))
-def children_of_node(node):
-    """
-    returns list of values of 'node' key
-    :param node:
-    :return:
-    """
-    return
-
+# todo try store dict in class variable and create method which returns amount of childs of any node
 
 def count_child(node, dict1):
     count = []
     if node not in dict1.keys():
         count += 0
-    # todo for node in start loop thru keys to add length
 
 
     # if
