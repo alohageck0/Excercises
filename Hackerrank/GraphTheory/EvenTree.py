@@ -12,11 +12,17 @@ class Graph:
         self.arr = arr1
         self.edges = list1
         self.edges_d = dict()
+        self.final = []
         for edge in self.edges:
             if not edge[1] in self.edges_d.keys():
                 self.edges_d[edge[1]] = [edge[0]]
             else:
                 self.edges_d.get(edge[1]).append(edge[0])
+
+    def add_to_list(self, list):
+        self.final.extend(list)
+        for i in self.final:
+            self.add_to_list(self.edges_d.get(i))
 
     def children_of_node(self, parent):
         count = 0
@@ -41,33 +47,64 @@ class Graph:
             return 0
 
 
-def get_list_of_nodes(graph, x):
-    if type(x) is int:
-        lis = [x]
-    elif type(x) is list:
-        lis = x
+# def get_list_of_nodes(graph, x):
 
 
-def count_child(graph, node):
-    global count
-    global temp
-    temp = graph.get_children_list(node)
-    for child in temp:
-        count += graph.count_nodes(child)
-        return count_child(graph, child)
-    return count
 
-    # if
-    #     count = 0
-    #     # for node in dict1.get(key):
-    # return count
+
+# def count_child(graph, node):
+#     count = 0
+#     if node in graph.edges_d.keys():
+#         count += len(graph.edges_d.get(node))
+#     temp = graph.edges_d.get(node)
+#     print(temp, count)
+#
+#     # for child in temp:
+#     #     count += graph.count_nodes(child)
+#     #     return count_child(graph, child)
+#     # return count
+#
+#     # if
+#     #     count = 0
+#     #     # for node in dict1.get(key):
+#     # return count
 
 
 # todo try store dict in class variable and create method which returns amount of childs of any node
 test = Graph(edges, arr)
 
-# print(count_child(test, 1))
+children = 0
 
+
+def check_key(node):
+    arr = []
+    if node in test.edges_d.keys():
+        return test.edges_d.get(node)
+    else:
+        return arr
+
+
+temp = check_key(5)
+
+
+def foo(list):
+    global temp
+    global children
+    if not len(list):
+        return
+    children += len(temp)
+    footemp = list
+    temp = []
+    for i in footemp:
+        if i in test.edges_d.keys():
+            temp.extend(test.edges_d.get(i))
+        else:
+            continue
+    return foo(temp)
+
+
+foo(temp)
+print(children)
 # print(count_child(8, vertices))
 # for node in range(arr[0]):
 #     count = int
