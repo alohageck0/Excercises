@@ -18,22 +18,34 @@ class Graph:
             else:
                 self.edges_d.get(edge[1]).append(edge[0])
 
-    def children_of_node(self, node):
-        temp = self.edges_d.get(node)
+    def children_of_node(self, parent):
+        count = 0
+        if parent in self.edges_d.keys():
+            count += self.count_nodes(parent)
+        else:
+            return count
+        temp = self.get_children_list(parent)
+
         for i in temp:
-            self.final.append(i)
+            count += self.count_nodes(i)
+            temp
 
     def get_children_list(self, node):
-        if node not in self.edges_d.keys():
-            return 0
-        else:
+        if node in self.edges_d.keys():
             return self.edges_d.get(node)
 
     def count_nodes(self, node):
-        if node not in self.edges_d.keys():
-            return 0
-        else:
+        if node in self.edges_d.keys():
             return len(self.edges_d.get(node))
+        else:
+            return 0
+
+
+def get_list_of_nodes(graph, x):
+    if type(x) is int:
+        lis = [x]
+    elif type(x) is list:
+        lis = x
 
 
 def count_child(graph, node):
@@ -54,7 +66,7 @@ def count_child(graph, node):
 # todo try store dict in class variable and create method which returns amount of childs of any node
 test = Graph(edges, arr)
 
-print(count_child(test, 1))
+# print(count_child(test, 1))
 
 # print(count_child(8, vertices))
 # for node in range(arr[0]):
