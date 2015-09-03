@@ -10,7 +10,7 @@ def count(num, digit):
     print(summ)
 
 
-count(num, 4)
+children(num, 4)
 
 '''
 Question:

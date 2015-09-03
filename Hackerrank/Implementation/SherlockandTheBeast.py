@@ -28,7 +28,7 @@ def count(num):
 
 for i in range(loops):
     numberdigits = int(input())
-    dic = count(numberdigits)
+    dic = children(numberdigits)
     fives = '555' * dic['fives']
     threes = '33333' * dic['threes']
     if type(dic) == dict:

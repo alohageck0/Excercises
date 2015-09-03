@@ -70,11 +70,10 @@ class Graph:
 #     # return count
 
 
-# todo try store dict in class variable and create method which returns amount of childs of any node
 test = Graph(edges, arr)
 
 children = 0
-
+count = 0
 
 def check_key(node):
     arr = []
@@ -106,11 +105,11 @@ def foo(list):
 foo(temp)
 print(children)
 # print(count_child(8, vertices))
-# for node in range(arr[0]):
-#     count = int
-#     children = foo()
-#     if not children % 2:
-#         count += 1
-#     else:
-#         continue
-# print(count)
+for node in range(arr[0]):
+    count = int
+    children = foo()
+    if not children % 2:
+        count += 1
+    else:
+        continue
+print(count)

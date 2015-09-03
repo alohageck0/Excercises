@@ -13,14 +13,14 @@ def findFirstSquare(first, last):
 
 
 for i in range(loops):
-    count = 0
+    children = 0
     arr = [int(x) for x in input().split(' ')]
     if findFirstSquare(arr[0], arr[1]):
         first = findFirstSquare(arr[0], arr[1])
     else:
-        print(count)
+        print(children)
         continue
     while first ** 2 <= arr[1]:
         first += 1
-        count += 1
-    print(count)
+        children += 1
+    print(children)

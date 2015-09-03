@@ -1,16 +1,16 @@
 __author__ = 'royalfiish'
 
 strin = 'abcdefgabc'
-count = dict()
+children = dict()
 
 for letter in strin:
-    if not count.get(letter):
-        count[letter] = 1
+    if not children.get(letter):
+        children[letter] = 1
     else:
-        count[letter] += 1
+        children[letter] += 1
 
-for k in sorted(count.keys()):
-    print(str(k) + ',' + str(count[k]))
+for k in sorted(children.keys()):
+    print(str(k) + ',' + str(children[k]))
 
 '''
 Question:

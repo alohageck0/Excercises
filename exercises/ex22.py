@@ -1,13 +1,13 @@
 __author__ = 'royalfiish'
 
 words = input('Enter sentence: ').split(' ')
-count = dict()
+children = dict()
 for word in words:
-    if word not in count:
-        count[word] = 1
+    if word not in children:
+        children[word] = 1
     else:
-        count[word] += 1
-for k, v in sorted(count.items()):
+        children[word] += 1
+for k, v in sorted(children.items()):
     print(k + ':', v)
 
 '''
