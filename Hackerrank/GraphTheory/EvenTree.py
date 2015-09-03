@@ -12,7 +12,9 @@ class Graph:
         self.arr = arr1
         self.edges = list1
         self.edges_d = dict()
-        self.final = []
+        self.check_key = []
+        self.temp = []
+        self.children = int
         for edge in self.edges:
             if not edge[1] in self.edges_d.keys():
                 self.edges_d[edge[1]] = [edge[0]]
@@ -46,8 +48,29 @@ class Graph:
         else:
             return 0
 
+    def check_key(self, node):
+        self.check_key = []
+        self.children = 0
+        self.temp = []
+        if node in self.edges_d.keys():
+            return self.edges_d.get(node)
+        else:
+            return self.check_key
 
-# def get_list_of_nodes(graph, x):
+    def foo(self, list):
+        if not len(list):
+            return
+        self.children += len(self.temp)
+        footemp = list
+        self.temp = []
+        for i in footemp:
+            if i in test.edges_d.keys():
+                self.temp.extend(test.edges_d.get(i))
+            else:
+                continue
+        return foo(self.temp)
+
+        # def get_list_of_nodes(graph, x):
 
 
 # test
@@ -71,9 +94,11 @@ class Graph:
 
 
 test = Graph(edges, arr)
+test.check_key(1)
 
 children = 0
 count = 0
+
 
 def check_key(node):
     arr = []
@@ -104,12 +129,12 @@ def foo(list):
 
 foo(temp)
 print(children)
-# print(count_child(8, vertices))
-for node in range(arr[0]):
-    count = int
-    children = foo()
-    if not children % 2:
-        count += 1
-    else:
-        continue
-print(count)
+# # print(count_child(8, vertices))
+# for node in range(arr[0]):
+#     count = int
+#     children = foo()
+#     if not children % 2:
+#         count += 1
+#     else:
+#         continue
+# print(count)
