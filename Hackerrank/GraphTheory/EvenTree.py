@@ -96,6 +96,7 @@ class Graph:
 test = Graph(edges, arr)
 # test.check_key(1)
 
+print(test.children)
 children = 0
 count = 0
 
