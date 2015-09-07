@@ -49,9 +49,9 @@ class Graph:
             return 0
 
     def check_key(self, node):
-        self.check_key = []
-        self.children = 0
-        self.temp = []
+        # self.check_key = []
+        # self.children = 0
+        # self.temp = []
         if node in self.edges_d.keys():
             return self.edges_d.get(node)
         else:
@@ -94,21 +94,16 @@ class Graph:
 
 
 test = Graph(edges, arr)
-test.check_key(1)
 
 children = 0
 count = 0
 
 
 def check_key(node):
-    arr = []
     if node in test.edges_d.keys():
         return test.edges_d.get(node)
     else:
-        return arr
-
-
-temp = check_key(5)
+        return test.temp
 
 
 def foo(list):
@@ -127,6 +122,8 @@ def foo(list):
     return foo(temp)
 
 
+temp = check_key(1)
+print(temp)
 foo(temp)
 print(children)
 # # print(count_child(8, vertices))
