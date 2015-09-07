@@ -100,6 +100,8 @@ count = 0
 
 
 def check_key(node):
+    global children
+    children = 0
     if node in test.edges_d.keys():
         return test.edges_d.get(node)
     else:
@@ -107,11 +109,10 @@ def check_key(node):
 
 
 def foo(list):
-    global temp
     global children
     if not len(list):
         return
-    children += len(temp)
+    children += len(list)
     footemp = list
     temp = []
     for i in footemp:
@@ -122,16 +123,17 @@ def foo(list):
     return foo(temp)
 
 
-temp = check_key(1)
-print(temp)
-foo(temp)
-print(children)
-# # print(count_child(8, vertices))
-# for node in range(arr[0]):
-#     count = int
-#     children = foo()
-#     if not children % 2:
-#         count += 1
-#     else:
-#         continue
-# print(count)
+# foo(check_key(4))
+# print(children)
+
+for node in range(2, arr[0] + 1):
+    children = 0
+    temp = check_key(node)
+    foo(temp)
+    # print(children)
+    if not children % 2 and children != 0:
+        count += 1
+    else:
+        continue
+# print(children)
+print(count)
