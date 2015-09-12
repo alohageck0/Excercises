@@ -1,2 +1,2 @@
-tets
-test
+var = 68
+print(var)
