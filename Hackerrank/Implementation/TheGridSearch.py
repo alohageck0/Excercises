@@ -1,1 +1,2 @@
-__author__ = 'Evgenii'
+arr = [int(x) for x in input().split(" ")]
+width = [int(x) for x in input().split(" ")]
