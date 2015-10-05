@@ -1,2 +1,3 @@
-arr = [int(x) for x in input().split(" ")]
-matrix = [int(x) for x in input().split(" ")]
+cases = int(input())
+for i in range(cases):
+    RandC = [int(x) for x in input().split(" ")]
