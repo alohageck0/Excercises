@@ -6,4 +6,14 @@ P = ['9505', '3845', '3530']
 
 for elem in G:
     if P[0] in elem:
-        print('Yes')
+        # print('Yes')
+        row = G.index(elem)
+        first = elem.index(P[0])
+
+        if len(G) - G.index(elem) < len(P) - 1:
+            print("NO")
+            break
+        print(row, first)
+    else:
+        print("NO")
+        # todo iterate trhough remaining elems in G, if another elems from P have index as first elem
