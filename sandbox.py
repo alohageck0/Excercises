@@ -16,4 +16,4 @@ for elem in G:
         print(row, first)
     else:
         print("NO")
-        # todo iterate trhough remaining elems in G, if another elems from P have index as first elem
+        # todo iterate trhough remaining elems in G, if another elems from P have index as first elemhhhjkjkkj
