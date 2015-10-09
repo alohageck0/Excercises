@@ -26,12 +26,22 @@ for i in range(len(G)):
         break
         # todo iterate trhough remaining elems in G, if another elems from P have index as first elemhhhjkjkkj
 
-print(row, first)
-# for i in range(1, len(P) - 1):
-#     if G[row + 1].index(P[i]) == first:
-#         row += 1
-#         continue
-#     else:
-#         print("NO")
-#         break
-#     print("YES")
+# print(row, first)
+
+if row + len(P) - 1 > len(G) - row:
+    print("NO")
+else:
+    i = 1
+    while i < len(P):
+        if P[i] in G[row + i]:
+            if G[row + i].index(P[i]) != first:
+                print("NO")
+                break
+            else:
+                if i == len(P) - 1:
+                    print("YES")
+                    break
+                i += 1
+        else:
+            print("NO")
+            break
