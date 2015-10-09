@@ -22,8 +22,34 @@ def getMatrix():
 for i in range(cases):
     G = getMatrix()
     P = getMatrix()
-    print(P)
-    print(G)
-    # for elem in G:
-    #    if P[0] in elem:
-    #        print('Yes')
+    # print(P)
+    # print(G)
+    for i in range(len(G)):
+        if P[0] not in G[i]:
+            if i <= len(G):
+                continue
+            else:
+                print("NO")
+                break
+        else:
+            row = i
+            first = G[i].index(P[0])
+            break
+
+    if len(P) - 2 > len(G) - row:
+        print("NO")
+    else:
+        i = 1
+        while i < len(P):
+            if P[i] in G[row + i]:
+                if G[row + i].index(P[i]) != first:
+                    print("NO")
+                    break
+                else:
+                    if i == len(P) - 1:
+                        print("YES")
+                        break
+                    i += 1
+            else:
+                print("NO")
+                break
