@@ -2,13 +2,13 @@ G = ['7283455864',
      '6731158619',
      '8988242643',
      '3830589324',
-     '9509509503',
+     '1239501233',
      '5633845374',
      '6473530293']
 
-P = ['950',
-     '384',
-     '353']
+P = ['9501',
+     '3845',
+     '3530']
 
 
 def splitElem(strin, num):
@@ -21,12 +21,13 @@ def splitElem(strin, num):
 
 smallLen = len(P[0])
 indecies = []
+row = len(G)
 for i in range(len(G)):
     if P[0] not in G[i]:
         if i <= len(G):
             continue
         else:
-            print("NO")
+            # print("NO")
             break
     else:
         row = i
@@ -61,7 +62,7 @@ else:
                 prints.append("NO")
                 break
 # print(prints)
-if "YES" in prints:
-    print("YES")
-else:
-    print("NO")
+    if "YES" in prints:
+        print("YES")
+    else:
+        print("NO")
