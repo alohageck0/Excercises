@@ -2,22 +2,21 @@ G = ['7283455864',
      '6731158619',
      '8988242643',
      '3830589324',
-     '1239501233',
+     '1239503950',
      '5633845374',
      '6473530293']
 
-P = ['9501',
-     '3845',
-     '3530']
+P = ['3950',
+     '5374',
+     '0293']
 
 
-def splitElem(strin, num):
+def findIndex(strin, smallstrin):
     arr = []
-    while strin:
-        arr.append(strin[:num])
-        strin = strin[num:]
-    return arr
-
+    for i in len(strin):
+        if strin[i] == smallstrin[0]:
+            if strin[i] == P[0]:
+                arr.append(i)
 
 smallLen = len(P[0])
 indecies = []
@@ -31,7 +30,7 @@ for i in range(len(G)):
             break
     else:
         row = i
-        splitted = splitElem(G[i], smallLen)
+        splitted = findIndex(G[i], smallLen)
         for ind in range(len(splitted)):
             if splitted[ind] == P[0]:
                 if ind == 0:
