@@ -38,7 +38,6 @@ for i in range(len(G)):
                 else:
                     indecies.append(ind * smallLen)
         break
-        # todo iterate trhough remaining elems in G, if another elems from P have index as first elemhhhjkjkkj
 
 # print(row, indecies)
 prints = []

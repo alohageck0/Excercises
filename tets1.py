@@ -18,3 +18,5 @@ for elem in G:
                 arr.append(i)
 
 print(arr)
+# todo first find index of first digit - then split from that index by number of small number,
+# then look reminder of element for first digit and split - at the end find indecies of large number
