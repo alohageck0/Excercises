@@ -21,8 +21,14 @@ def findIndex(elem):
     for i in range(len(elem)):
         if elem[i] == P[0][0]:
             if elem.index(P[0]) == i:
-                arr.append(i)
-                nextIndex += (i + len(P[0]))
+                if not arr:
+                    arr.append(i)
+                    nextIndex = i + len(P[0])
+                    break
+                else:
+                    arr.append(nextIndex + i)
+                    nextIndex = arr[-1] + len(P[0])
+                    break
     if nextIndex >= len(elem):
         print(arr)
     else:
