@@ -10,42 +10,43 @@ P = ['3950',
      '5374',
      '0293']
 
-
-def findIndex(strin, smallstrin):
-    arr = []
-    for i in len(strin):
-        if strin[i] == smallstrin[0]:
-            if strin[i] == P[0]:
-                arr.append(i)
-
 smallLen = len(P[0])
-indecies = []
-row = len(G)
-for i in range(len(G)):
-    if P[0] not in G[i]:
-        if i <= len(G):
-            continue
-        else:
-            # print("NO")
-            break
-    else:
-        row = i
-        splitted = findIndex(G[i], smallLen)
-        for ind in range(len(splitted)):
-            if splitted[ind] == P[0]:
-                if ind == 0:
-                    indecies.append(0)
-                else:
-                    indecies.append(ind * smallLen)
-        break
 
-# print(row, indecies)
-prints = []
-if len(P) - 1 >= len(G) - row:
+arr = []
+
+
+def findNewIndex(elem):
+    '''
+    create array with indecies of P[0]
+    :param elem:
+    :return:
+    '''
+    global arr
+    if P[0] in elem:
+        ind = elem.index(P[0])
+        if not arr:
+            arr.append(elem.index(P[0]))
+        else:
+            arr.append(arr[-1] + len(P[0]) + ind)
+        elem = elem[len(P[0]) + ind:]
+    if P[0] not in elem:
+        return
+    else:
+        return findNewIndex(elem)
+
+
+for elem in G:
+    if not arr:
+        findNewIndex(elem)
+    else:
+        break
+# todo create function if found match with first element, but not found pattern and reminder rows in G more than rows in pattern -
+# todo loop findNewIndex() again until rows G < rows P
+if not arr:
     print("NO")
 else:
     i = 1
-    for inde in indecies:
+    for inde in arr:
         while i < len(P):
             if P[i] in G[row + i]:
                 if G[row + i].index(P[i]) != inde:
@@ -59,7 +60,7 @@ else:
             else:
                 prints.append("NO")
                 break
-# print(prints)
+                # print(prints)
     if "YES" in prints:
         print("YES")
     else:
