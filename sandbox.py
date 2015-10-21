@@ -42,26 +42,27 @@ for elem in G:
         break
 # todo create function if found match with first element, but not found pattern and reminder rows in G more than rows in pattern -
 # todo loop findNewIndex() again until rows G < rows P
-if not arr:
-    print("NO")
-else:
-    i = 1
-    for inde in arr:
-        while i < len(P):
-            if P[i] in G[row + i]:
-                if G[row + i].index(P[i]) != inde:
-                    prints.append("NO")
-                    break
-                else:
-                    if i == len(P) - 1:
-                        prints.append("YES")
-                        break
-                    i += 1
-            else:
-                prints.append("NO")
-                break
-                # print(prints)
-    if "YES" in prints:
-        print("YES")
-    else:
-        print("NO")
+
+# if not arr:
+#     print("NO")
+# else:
+#     i = 1
+#     for inde in arr:
+#         while i < len(P):
+#             if P[i] in G[row + i]:
+#                 if G[row + i].index(P[i]) != inde:
+#                     prints.append("NO")
+#                     break
+#                 else:
+#                     if i == len(P) - 1:
+#                         prints.append("YES")
+#                         break
+#                     i += 1
+#             else:
+#                 prints.append("NO")
+#                 break
+#                 # print(prints)
+#     if "YES" in prints:
+#         print("YES")
+#     else:
+#         print("NO")
