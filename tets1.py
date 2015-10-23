@@ -1,8 +1,8 @@
 G = ['7283455864',
      '6731158619',
-     '8911111142643',
+     '8911111143',
      '3830589324',
-     '131111111111112',
+     '1311111112',
      '5633845374',
      '6473530293']
 
@@ -13,7 +13,7 @@ P = ['1111',
 arr = []
 
 
-def find_characters(strin, pattern):
+def findIndecies(strin, pattern):
     """
     Returns array of indexes of first row of pattern
     :param strin:
@@ -22,11 +22,16 @@ def find_characters(strin, pattern):
     """
     found = []
     last_index = -1
-    while True:
-        try:
-            last_index = strin.index(pattern, last_index + 1)
-        except ValueError:
-            break
-        else:
-            found.append(last_index)
-    return found
+    if pattern in strin:
+        while True:
+            try:
+                last_index = strin.index(pattern, last_index + 1)
+            except ValueError:
+                break
+            else:
+                found.append(last_index)
+        return found
+
+
+x = findIndecies(G[4], P[0])
+print(x)
