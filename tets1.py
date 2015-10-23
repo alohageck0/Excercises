@@ -31,7 +31,13 @@ def findIndecies(strin, pattern):
             else:
                 found.append(last_index)
         return found
+    else:
+        return False
 
 
-x = findIndecies(G[4], P[0])
-print(x)
+# todo develop logic for searhcing every element
+result = "NO"
+for i in range(len(G) - len(P)):
+    x = findIndecies(G[i], P[0])
+    if not x:
+        print(result)
