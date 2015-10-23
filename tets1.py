@@ -32,13 +32,21 @@ def findNewIndexNew(elem):
     global arr
     if P[0] in elem:
         for i in range(len(elem)):
+
             ind = elem.index(P[0])
             if i == ind:
                 arr.append(i)
-    if P[0] not in elem:
-        print(arr)
-    else:
-        return findNewIndex(elem)
+    print(arr)
 
 
-findNewIndex(G[4])
+def find_characters(word, character):
+    found = []
+    last_index = -1
+    while True:
+        try:
+            last_index = word.index(character, last_index + 1)
+        except ValueError:
+            break
+        else:
+            found.append(last_index)
+    return found
