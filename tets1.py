@@ -36,9 +36,9 @@ def findIndecies(strin, pattern):
 
 
 testCount = len(P) - 1
-count = int
+count = 0
 result = "NO"
-for i in range(len(G) - len(P)):
+for i in range((len(G) - len(P)) + 1):
     if result == "YES":
         break
     indeciesArrayFirstElem = findIndecies(G[i], P[0])
@@ -46,10 +46,14 @@ for i in range(len(G) - len(P)):
         continue
     else:
         i += 1
-        for index in indeciesArrayFirstElem:
-            for j in range(1, len(P)):
-                testStrin = G[i]
-                if testStrin.count(P[j]) > 1:
-                    indeciesArrayNextElem = findIndecies(testStrin, P[j])
-
-                else:
+        for elem in range(i, i + len(P) - 1):
+            for index in indeciesArrayFirstElem:
+                for j in range(1, len(P)):
+                    testStrin = G[elem]
+                    if testStrin.count(P[j]) >= 1:
+                        indeciesArrayNextElem = findIndecies(testStrin, P[j])
+                        if index in indeciesArrayNextElem:
+                            count += 1
+if testCount == count:
+    result = "YES"
+print(result)
