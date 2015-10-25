@@ -2,7 +2,7 @@ G = ['7283455864',
      '6731158619',
      '8911111143',
      '3830589324',
-     '1311111112',
+     '1311111111',
      '5633845374',
      '6473530293']
 
@@ -38,6 +38,12 @@ def findIndecies(strin, pattern):
 # todo develop logic for searhcing every element
 result = "NO"
 for i in range(len(G) - len(P)):
+    if result == "YES":
+        break
     x = findIndecies(G[i], P[0])
     if not x:
-        print(result)
+        continue
+    else:
+        i += 1
+        for j in range(1, len(P)):
+            if G[i]
