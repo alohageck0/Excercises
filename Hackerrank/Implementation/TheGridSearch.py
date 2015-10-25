@@ -22,54 +22,50 @@ def splitElem(strin, num):
     return arr
 
 
+def findIndecies(strin, pattern):
+    """
+    Returns array of indexes of first row of pattern
+    :param strin:
+    :param pattern:
+    :return:
+    """
+    found = []
+    last_index = -1
+    if pattern in strin:
+        while True:
+            try:
+                last_index = strin.index(pattern, last_index + 1)
+            except ValueError:
+                break
+            else:
+                found.append(last_index)
+        return found
+    else:
+        return False
+
+
 for i in range(cases):
     G = getMatrix()
     P = getMatrix()
-
-    smallLen = len(P[0])
-    indecies = []
-    row = len(G)
-    for i in range(len(G)):
-        if P[0] not in G[i]:
-            if i <= len(G):
-                continue
-            else:
-                # print("NO")
-                break
-        else:
-            row = i
-            splitted = splitElem(G[i], smallLen)
-            for ind in range(len(splitted)):
-                if splitted[ind] == P[0]:
-                    if ind == 0:
-                        indecies.append(0)
-                    else:
-                        indecies.append(ind * smallLen)
+    testCount = len(P) - 1
+    count = 0
+    result = "NO"
+    for i in range((len(G) - len(P)) + 1):
+        if result == "YES":
             break
-            # todo iterate trhough remaining elems in G, if another elems from P have index as first elemhhhjkjkkj
-
-    # print(row, indecies)
-    prints = []
-    if len(P) - 1 >= len(G) - row:
-        print("NO")
-    else:
-        i = 1
-        for inde in indecies:
-            while i < len(P):
-                if P[i] in G[row + i]:
-                    if G[row + i].index(P[i]) != inde:
-                        prints.append("NO")
-                        break
-                    else:
-                        if i == len(P) - 1:
-                            prints.append("YES")
-                            break
-                        i += 1
-                else:
-                    prints.append("NO")
-                    break
-                    # print(prints)
-        if "YES" in prints:
-            print("YES")
+        indeciesArrayFirstElem = findIndecies(G[i], P[0])
+        if not indeciesArrayFirstElem:
+            continue
         else:
-            print("NO")
+            i += 1
+            for elem in range(i, i + len(P) - 1):
+                for index in indeciesArrayFirstElem:
+                    for j in range(1, len(P)):
+                        testStrin = G[elem]
+                        if testStrin.count(P[j]) >= 1:
+                            indeciesArrayNextElem = findIndecies(testStrin, P[j])
+                            if index in indeciesArrayNextElem:
+                                count += 1
+    if testCount == count:
+        result = "YES"
+    print(result)
