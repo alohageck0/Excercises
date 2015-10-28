@@ -13,4 +13,5 @@ for i in range(loops):
             continue
         else:
             result = "Not Funny"
+            break
     print(result)
