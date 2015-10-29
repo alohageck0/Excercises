@@ -1,20 +1,24 @@
-strin = "acxz"
-
-
-def returnAscii(letter):
-    return ord(letter)
-
-
-# loops = int(input())
-# for i in range(loops):
-#     strin = input()
-revStrin = strin[::-1]
-maxIndex = len(strin) - 1
-result = "Funny"
-for i in range(1, len(strin)):
-    if abs(returnAscii(strin[i]) - returnAscii(strin[i - 1])) == abs(
-                    returnAscii(revStrin[i]) - returnAscii(revStrin[i - 1])):
-        continue
+def convert32bit(num):
+    binum = bin(num)[2:]
+    if len(binum) < 32:
+        binum32 = "0" * (32 - len(binum)) + binum
+        return binum32
     else:
-        result = "Not Funny"
-print(result)
+        return binum
+
+
+def flip(strin):
+    flipped = str()
+    for bit in strin:
+        if not int(bit):
+            flipped += "1"
+        else:
+            flipped += "0"
+    return flipped
+
+
+print(convert32bit(1))
+print(flip("00000000000000000000000000000001"))
+print(int("11111111111111111111111111111110", 2))
+
+print(int(flip(convert32bit(1)), 2))
