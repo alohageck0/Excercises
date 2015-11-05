@@ -8,5 +8,5 @@ for i in range(loops):
         else:
             amount = blackwhite[0] * costs[0] + blackwhite[1] * costs[0] + blackwhite[1] * costs[2]
     else:
-        amount = blackwhite[0] * costs[0] + blackwhite[1] + costs[1]
+        amount = blackwhite[0] * costs[0] + blackwhite[1] * costs[1]
     print(amount)
