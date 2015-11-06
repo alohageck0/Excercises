@@ -8,3 +8,6 @@ for i in range(len(arr) - 1):
             count += 1
             break
 print(count)
+
+
+# 43253
