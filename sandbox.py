@@ -1,9 +1,8 @@
-strin = "BBBBB"
-deletions = 0
-letter = strin[0]
-for i in range(1, len(strin)):
-    if strin[i] == letter:
-        deletions += 1
-    else:
-        letter = strin[i]
-print(deletions)
+arr = [1, 2, 3, 4, 5, 6, 7]
+point = int(len(arr) / 2) + 1
+down = arr[:point]
+up = arr[point:]
+i = len(down) - 1
+print(down, up)
+print(len(down), len(up))
+print(i)
