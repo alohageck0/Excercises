@@ -1,7 +1,7 @@
 # given = [int(x) for x in input().split(" ")]
 # numbers = [int(x) for x in input().split(" ")]
 # arr = sorted(numbers)
-def pointer():
+def pointer(point):
     global count
     down = arr[:point]
     up = arr[point:]
@@ -21,7 +21,6 @@ count = 0
 diff = given[1]
 
 point = int(len(arr) / 2)
-
+for i in range(1, len(arr) - 1):
+    pointer(i)
 print(count)
-# todo loop through elements in arrays
-# 43253
