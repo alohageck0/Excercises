@@ -7,7 +7,6 @@ for i in range(1, len):
     element = arr[i]
     if element < arr[i - 1]:
         arr[i] = arr[i - 1]
-        # count+=1
         for j in reversed(range(i)):
             if arr[j - 1] < element:
                 arr[j] = element
@@ -20,9 +19,10 @@ for i in range(1, len):
                 else:
                     arr[j] = arr[j - 1]
                     count += 1
-                continue
-                # print(' '.join([str(x) for x in arr]))
+                if arr[j - 1] == element:
+                    break
+                else:
+                    continue
     else:
         pass
-        # print(' '.join([str(x) for x in arr]))
 print(count)
