@@ -23,6 +23,4 @@ for i in range(1, len):
                     break
                 else:
                     continue
-    else:
-        pass
 print(count)
