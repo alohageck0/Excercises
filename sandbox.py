@@ -4,18 +4,21 @@ message = "chillout"
 newMess = message.replace(" ", "")
 # rows = round(math.sqrt(len(input().replace(" ", ""))))
 rows = round(math.sqrt(len(newMess)))
+columns = rows
+while columns * rows < len(newMess):
+    columns += 1
 print(rows)
 arr = []
-Matrix = [["" for x in range(rows + 1)] for x in range(rows)]
+Matrix = [["" for x in range(columns)] for x in range(rows)]
 for elem in Matrix:
     for i in range(len(elem)):
         try:
             elem[i] = newMess[i]
         except IndexError:
             pass
-    newMess = newMess[rows + 1:]
+    newMess = newMess[columns:]
 print(Matrix)
-for i in range(rows + 1):
+for i in range(columns):
     word = ""
     for elem in Matrix:
         word += elem[i]
