@@ -1,1 +1,1 @@
-inp = input()
+# inp = input()
