@@ -1,26 +1,7 @@
-import math
-# message = input()
-message = "chillout"
-newMess = message.replace(" ", "")
-# rows = round(math.sqrt(len(input().replace(" ", ""))))
-rows = round(math.sqrt(len(newMess)))
-columns = rows
-while columns * rows < len(newMess):
-    columns += 1
-print(rows)
-arr = []
-Matrix = [["" for x in range(columns)] for x in range(rows)]
-for elem in Matrix:
-    for i in range(len(elem)):
-        try:
-            elem[i] = newMess[i]
-        except IndexError:
-            pass
-    newMess = newMess[columns:]
-print(Matrix)
-for i in range(columns):
-    word = ""
-    for elem in Matrix:
-        word += elem[i]
-    arr.append(word)
-print(" ".join(arr))
+# given = int(input())
+# numbers = [int(x) for x in input().split(" ")]
+numbers = [1, 2, 3]
+test = []
+for i in range(len(numbers)):
+    test.append(str(numbers[len(numbers) - i - 1]))
+print(" ".join(test))
