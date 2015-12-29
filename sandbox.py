@@ -2,17 +2,18 @@
 
 import sys
 
-# [[1, 1, 1, 1, 1, 1],
-#  [2, 2, 2, 2, 2, 2],
-#  [3, 3, 3, 3, 3, 3],
-#  [4, 4, 4, 4, 4, 4],
-#  [5, 5, 5, 5, 5, 5],
-#  [6, 6, 6, 6, 6, 6]]
+arr = [[1, 1, 1, 0, 0, 0],
+       [0, 1, 0, 0, 0, 0],
+       [1, 1, 1, 0, 0, 0],
+       [0, 9, 2, -4, -4, 0],
+       [0, 0, 0, -2, 0, 0],
+       [0, 0, -1, -2, -4, 0]]
 
-arr = []
-for arr_i in range(6):
-    arr_t = [int(arr_temp) for arr_temp in input().strip().split(' ')]
-    arr.append(arr_t)
+
+# arr = []
+# for arr_i in range(6):
+#     arr_t = [int(arr_temp) for arr_temp in input().strip().split(' ')]
+#     arr.append(arr_t)
 
 
 def count_hourglass(start):
@@ -21,9 +22,12 @@ def count_hourglass(start):
     return summ
 
 
-num = 0
+num1 = 0
+num2 = 0
 result = 0
-while num < 4:
-    if count_hourglass(num) > result:
-        result = count_hourglass(num)
+for i in range(4):
+    for j in range(4):
+        test = count_hourglass(j)
+        if test > result:
+            result = test
 print(result)
