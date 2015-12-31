@@ -19,12 +19,19 @@ arr = [[1, 1, 1, 0, 0, 0],
 def count_hourglass(start):
     summ = 0
     summ += arr[start][start]
+    a = arr[start][start]
     summ += arr[start][start + 1]
+    a = arr[start][start + 1]
     summ += arr[start][start + 2]
+    a = arr[start][start + 2]
     summ += arr[start + 1][start + 1]
+    a = arr[start + 1][start + 1]
     summ += arr[start + 2][start]
+    a = arr[start + 2][start]
     summ += arr[start + 2][start + 1]
+    a = arr[start + 2][start + 1]
     summ += arr[start + 2][start + 2]
+    a = arr[start + 2][start + 2]
     return summ
 
 
