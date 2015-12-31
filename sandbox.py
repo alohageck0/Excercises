@@ -16,31 +16,22 @@ arr = [[1, 1, 1, 0, 0, 0],
 #     arr.append(arr_t)
 
 
-def count_hourglass(start):
+def count_hourglass(first, second):
     summ = 0
-    summ += arr[start][start]
-    a = arr[start][start]
-    summ += arr[start][start + 1]
-    a = arr[start][start + 1]
-    summ += arr[start][start + 2]
-    a = arr[start][start + 2]
-    summ += arr[start + 1][start + 1]
-    a = arr[start + 1][start + 1]
-    summ += arr[start + 2][start]
-    a = arr[start + 2][start]
-    summ += arr[start + 2][start + 1]
-    a = arr[start + 2][start + 1]
-    summ += arr[start + 2][start + 2]
-    a = arr[start + 2][start + 2]
+    summ += arr[first][second]
+    summ += arr[first][second + 1]
+    summ += arr[first][second + 2]
+    summ += arr[first + 1][second + 1]
+    summ += arr[first + 2][second]
+    summ += arr[first + 2][second + 1]
+    summ += arr[first + 2][second + 2]
     return summ
 
 
-num1 = 0
-num2 = 0
 result = 0
 for i in range(4):
     for j in range(4):
-        test = count_hourglass(j)
+        test = count_hourglass(i, j)
         if test > result:
             result = test
 print(result)

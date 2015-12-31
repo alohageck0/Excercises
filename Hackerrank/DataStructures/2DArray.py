@@ -4,16 +4,22 @@ for arr_i in range(6):
     arr.append(arr_t)
 
 
-def count_hourglass(start):
-    summ = arr[start][start] + arr[start][start + 1] + arr[start][start + 2] + arr[start + 1][start + 1] + \
-           arr[start + 2][start] + arr[start + 2][start + 1] + arr[start + 2][start + 2]
+def count_hourglass(first, second):
+    summ = 0
+    summ += arr[first][second]
+    summ += arr[first][second + 1]
+    summ += arr[first][second + 2]
+    summ += arr[first + 1][second + 1]
+    summ += arr[first + 2][second]
+    summ += arr[first + 2][second + 1]
+    summ += arr[first + 2][second + 2]
     return summ
 
 
-num = 0
 result = 0
-while num < 4:
-    if count_hourglass(num) > result:
-        result = count_hourglass(num)
-    num += 1
+for i in range(4):
+    for j in range(4):
+        test = count_hourglass(i, j)
+        if test > result:
+            result = test
 print(result)
