@@ -16,10 +16,12 @@ def count_hourglass(first, second):
     return summ
 
 
-result = 0
+result = None
 for i in range(4):
     for j in range(4):
         test = count_hourglass(i, j)
-        if test > result:
+        if result is None:
+            result = test
+        elif test > result:
             result = test
 print(result)
